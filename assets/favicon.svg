@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B5E3B"/>
+      <stop offset="1" stop-color="#15492E"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="28" y1="8" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C5963A"/>
+      <stop offset="1" stop-color="#9CAF88"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- F letter -->
+  <path d="M16 16H36V22H24V28H34V34H24V48H16V16Z" fill="#FFF8EC" opacity="0.95"/>
+  <!-- Leaf accent -->
+  <path d="M38 12C38 12 52 16 52 30C52 36 48 40 44 42C44 42 50 34 44 24C40 18 38 12 38 12Z" fill="url(#leaf)" opacity="0.9"/>
+  <!-- Small leaf -->
+  <path d="M40 38C40 38 48 42 48 48C48 50 46 52 44 52C44 52 46 48 42 44L40 38Z" fill="#C5963A" opacity="0.7"/>
+</svg>

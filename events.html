@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Friends of Fieldway</title>
+    <meta name="description" content="Explore upcoming events at Friends of Fieldway: workshops, social gatherings, youth sessions, creative arts, and community wellbeing activities." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="./" aria-label="Friends of Fieldway home">
+          <img class="brand__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="44" height="44" />
+          <span class="brand__text">
+            <strong>Friends of Fieldway</strong>
+          </span>
+        </a>
+        <nav class="nav" id="main-nav" aria-label="Primary">
+          <a href="./" class="nav__link">Home</a>
+          <a href="./about.html" class="nav__link">About Us</a>
+          <a href="./programmes.html" class="nav__link">Programmes</a>
+          <a href="./events.html" class="nav__link nav__link--active">Events</a>
+          <a href="./get-involved.html" class="nav__link">Get Involved</a>
+          <a href="./contact.html" class="nav__link">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- PAGE HERO -->
+      <section class="page-hero reveal">
+        <div class="container">
+          <h1 class="page-hero__title">Events and activities</h1>
+          <p class="page-hero__subtitle">
+            Discover what is happening at Friends of Fieldway. From weekly sessions to special community gatherings, there is always something to get involved in.
+          </p>
+        </div>
+      </section>
+
+      <!-- EVENTS LISTING -->
+      <section class="section section--cream" aria-label="Events listing">
+        <div class="container">
+
+          <!-- Filter Pills -->
+          <div class="filter-pills" role="group" aria-label="Filter events by category">
+            <button class="filter-pill filter-pill--active" data-category="all">All events</button>
+            <button class="filter-pill" data-category="education">Education</button>
+            <button class="filter-pill" data-category="community">Community</button>
+            <button class="filter-pill" data-category="creative">Creative</button>
+            <button class="filter-pill" data-category="wellbeing">Wellbeing</button>
+          </div>
+
+          <!-- Event Cards -->
+          <div class="event-grid">
+
+            <article class="card card--event reveal" data-category="education">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">14</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--education">Education</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Homework club open session</h3>
+                <p class="card__text">Drop in for a free homework support session. Trained volunteers are available to help with maths, English, and science assignments.</p>
+                <div class="event__meta">
+                  <span>3:30 pm - 5:30 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="community">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">16</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--community">Community</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Women's group coffee morning</h3>
+                <p class="card__text">A relaxed morning for women in the community to meet, share, and enjoy a friendly cup of tea together. All women welcome.</p>
+                <div class="event__meta">
+                  <span>10:00 am - 12:00 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="creative">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">18</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--creative">Creative</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Poetry and spoken word evening</h3>
+                <p class="card__text">An open evening of poetry reading, spoken word performance, and creative writing. All levels welcome, whether you want to share or simply listen.</p>
+                <div class="event__meta">
+                  <span>6:30 pm - 8:30 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="wellbeing">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">20</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--wellbeing">Wellbeing</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Elderly tea morning and wellness chat</h3>
+                <p class="card__text">A warm and welcoming morning for older residents featuring tea, conversation, and a gentle wellbeing discussion on staying healthy and active.</p>
+                <div class="event__meta">
+                  <span>10:30 am - 12:30 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="education">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">22</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--education">Education</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Youth mentoring and goal-setting workshop</h3>
+                <p class="card__text">A focused session for young people to work with mentors on setting personal and academic goals. Includes practical exercises and one-to-one time.</p>
+                <div class="event__meta">
+                  <span>4:00 pm - 6:00 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="community">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">25</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--community">Community</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Men's group: open discussion evening</h3>
+                <p class="card__text">A relaxed evening for men to come together, talk openly, and build connections in a supportive and non-judgemental space.</p>
+                <div class="event__meta">
+                  <span>7:00 pm - 9:00 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="creative">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">27</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--creative">Creative</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Community art workshop: painting for beginners</h3>
+                <p class="card__text">A hands-on painting workshop for all ages and abilities. All materials provided. Come along and discover your creative side in a friendly environment.</p>
+                <div class="event__meta">
+                  <span>2:00 pm - 4:00 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--event reveal" data-category="wellbeing">
+              <div class="event__header">
+                <div class="event__date">
+                  <span class="event__date-day">30</span>
+                  <span class="event__date-month">Apr</span>
+                </div>
+                <span class="event__category event__category--wellbeing">Wellbeing</span>
+              </div>
+              <div class="event__body">
+                <h3 class="event__title">Women's wellbeing and self-care session</h3>
+                <p class="card__text">A gentle afternoon focused on self-care, relaxation techniques, and open conversation about women's health and wellbeing.</p>
+                <div class="event__meta">
+                  <span>1:00 pm - 3:00 pm</span>
+                  <span>Fieldway Community Hub</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--white" aria-label="Call to action">
+        <div class="container">
+          <div class="cta-section reveal">
+            <h2>Want to attend an event or suggest one?</h2>
+            <p>We are always looking for ideas and feedback from the community. Let us know what you would like to see at Friends of Fieldway.</p>
+            <div class="hero__actions">
+              <a class="btn btn--white btn--lg" href="./contact.html">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <strong>Friends of Fieldway</strong>
+            <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
+            <div class="newsletter" aria-label="Newsletter signup">
+              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
+              <button class="btn btn--sage btn--sm">Subscribe</button>
+            </div>
+          </div>
+          <div class="footer__col">
+            <strong>Quick Links</strong>
+            <a href="./">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./programmes.html">Programmes</a>
+            <a href="./events.html">Events</a>
+            <a href="./get-involved.html">Get Involved</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+          <div class="footer__col">
+            <strong>Contact</strong>
+            <a href="mailto:hello@friendsoffieldway.org">hello@friendsoffieldway.org</a>
+            <a href="tel:+440000000000">020 0000 0000</a>
+            <p>Fieldway Community Hub<br/>London, UK</p>
+          </div>
+          <div class="footer__col">
+            <strong>Follow Us</strong>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Photography from <a href="https://unsplash.com/license" target="_blank" rel="noreferrer">Unsplash</a> under the Unsplash License.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

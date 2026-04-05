@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Programmes | Friends of Fieldway</title>
+    <meta name="description" content="Explore our programmes: homework club, tutoring, youth activities, women's and men's groups, elderly engagement, and creative arts. Something for everyone in the community." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="./" aria-label="Friends of Fieldway home">
+          <img class="brand__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="44" height="44" />
+          <span class="brand__text">
+            <strong>Friends of Fieldway</strong>
+          </span>
+        </a>
+        <nav class="nav" id="main-nav" aria-label="Primary">
+          <a href="./" class="nav__link">Home</a>
+          <a href="./about.html" class="nav__link">About Us</a>
+          <a href="./programmes.html" class="nav__link nav__link--active">Programmes</a>
+          <a href="./events.html" class="nav__link">Events</a>
+          <a href="./get-involved.html" class="nav__link">Get Involved</a>
+          <a href="./contact.html" class="nav__link">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- PAGE HERO -->
+      <section class="page-hero reveal">
+        <div class="container">
+          <h1 class="page-hero__title">Our programmes</h1>
+          <p class="page-hero__subtitle">
+            From educational support to creative expression, we offer meaningful programmes designed around the real needs of our community. There is something for everyone.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROGRAMMES -->
+      <section class="section section--cream" aria-label="Programme details">
+        <div class="container">
+
+          <!-- 1. Homework Club -->
+          <div class="programme-detail reveal" id="homework-club">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--sage); --accent-bg: var(--sage-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 10h36v30H6z"/>
+                    <path d="M6 10l18 12L42 10"/>
+                    <path d="M14 22v10"/>
+                    <path d="M20 22v10"/>
+                    <path d="M14 27h6"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Homework club and academic support</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our homework club provides a quiet, supportive learning environment where children and young people can focus on their studies with the help of trained volunteers. We believe every young person deserves the opportunity to succeed academically, regardless of their home circumstances.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--sage)">
+                <li>Quiet and structured study space after school</li>
+                <li>Help with maths, English, science, and assignments</li>
+                <li>Access to learning resources and materials</li>
+                <li>Building confidence and positive study habits</li>
+                <li>Small group support for focused learning</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Children develop stronger study routines, improved grades, and greater confidence in their learning.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/hero-learning.jpg" alt="Young people working together at a study table" width="1800" height="1200" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 2. Tutoring & Mentoring -->
+          <div class="programme-detail programme-detail--reverse reveal" id="tutoring-mentoring">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="14" r="6"/>
+                    <circle cx="34" cy="16" r="5"/>
+                    <path d="M8 38v-4a10 10 0 0 1 10-10h0"/>
+                    <path d="M26 38v-3a8 8 0 0 1 8-8h0"/>
+                    <path d="M22 24l4-2"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Individual tutoring and mentoring</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our one-to-one tutoring and mentoring programme matches young people with dedicated volunteers who provide tailored academic support and personal guidance. Each relationship is built on trust, encouragement, and a genuine commitment to helping young people reach their potential.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--teal)">
+                <li>One-to-one academic support tailored to individual needs</li>
+                <li>Exam preparation and study skills coaching</li>
+                <li>Personal development and confidence building</li>
+                <li>Goal setting and positive mentoring relationships</li>
+                <li>Support with transitions between school years</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Young people gain confidence, achieve better results, and develop valuable relationships with positive role models.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/hero-community.jpg" alt="Mentor and young person working together" width="1600" height="1067" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 3. Youth Activities -->
+          <div class="programme-detail reveal" id="youth-activities">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--peach-dark); --accent-bg: var(--peach-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M24 4l5.5 11.2L42 17l-9 8.8L35 38 24 32.2 13 38l2-12.2-9-8.8 12.5-1.8z"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Youth activities and engagement</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our youth programme offers a wide range of positive, engaging activities designed to help young people develop skills, build friendships, and make constructive use of their time. We provide a safe and supportive environment where young people can be themselves and explore their interests.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--peach)">
+                <li>Creative workshops and hands-on projects</li>
+                <li>Group discussions on topics that matter to young people</li>
+                <li>Life skills, teamwork, and communication training</li>
+                <li>Sports and recreational activities</li>
+                <li>Leadership development and volunteering opportunities</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Young people build self-esteem, develop practical skills, and form positive connections with peers and mentors.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/hero-arts.jpg" alt="Young people participating in creative workshop activities" width="1600" height="1060" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 4. Women's Group -->
+          <div class="programme-detail programme-detail--reverse reveal" id="womens-group">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--plum); --accent-bg: var(--lavender-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M24 34C14 34 8 28 8 20s6-14 16-14 16 6 16 14-6 14-16 14z"/>
+                    <path d="M16 20c0-2 3.6-6 8-6s8 4 8 6"/>
+                    <path d="M19 25a6 6 0 0 0 10 0"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Women's group and support network</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our women's group creates a warm, welcoming space where women can come together for support, connection, and personal growth. Whether you are looking for parenting advice, wellbeing sessions, or simply a friendly cup of tea and conversation, you are welcome here.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--lavender)">
+                <li>Wellbeing and self-care sessions</li>
+                <li>Parenting support discussions and workshops</li>
+                <li>Skills development and confidence building</li>
+                <li>Social gatherings and community events</li>
+                <li>A safe and supportive space to share and be heard</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Women build stronger support networks, develop new skills, and feel more confident and connected in their community.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/hero-community.jpg" alt="Women gathering in a warm community space for group discussion" width="1600" height="1067" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 5. Men's Group -->
+          <div class="programme-detail reveal" id="mens-group">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--mustard-dark); --accent-bg: var(--mustard-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 28c0 0 4-4 12-4s12 4 12 4"/>
+                    <path d="M18 18a6 6 0 0 1 12 0"/>
+                    <path d="M16 36h16"/>
+                    <path d="M20 36v4"/>
+                    <path d="M28 36v4"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Men's group and community support</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our men's group provides a relaxed, supportive environment where men can come together to talk, learn, and connect. We understand that men often face barriers to seeking support, and we aim to create a space where it feels natural and comfortable to do so.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--mustard)">
+                <li>Open discussion forums on topics that matter</li>
+                <li>Personal development and wellbeing sessions</li>
+                <li>Volunteering and community involvement opportunities</li>
+                <li>Recreational activities and social events</li>
+                <li>Peer support in a relaxed, non-judgemental setting</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Men develop stronger social connections, improved wellbeing, and a greater sense of purpose and belonging.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/hero-community.jpg" alt="Men in a community discussion group sharing ideas" width="1600" height="1067" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 6. Elderly Engagement -->
+          <div class="programme-detail programme-detail--reverse reveal" id="elderly-engagement">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 36V22a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v14"/>
+                    <path d="M10 36h28"/>
+                    <ellipse cx="24" cy="12" rx="4" ry="3"/>
+                    <path d="M18 28h12"/>
+                    <path d="M18 32h8"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Elderly community engagement</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our elderly engagement programme ensures that older residents remain a valued and active part of community life. We offer regular social gatherings, wellness activities, and creative sessions designed to reduce isolation and promote wellbeing.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--teal)">
+                <li>Weekly tea mornings and social meetups</li>
+                <li>Gentle wellness sessions and health awareness</li>
+                <li>Storytelling and sharing life experiences</li>
+                <li>Arts, crafts, and creative activities</li>
+                <li>Intergenerational events with younger community members</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Older residents enjoy less isolation, better wellbeing, and a stronger sense of belonging in their community.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/elders-tea.png" alt="Elderly community members sharing tea and conversation" width="1024" height="1024" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 7. Creative Arts -->
+          <div class="programme-detail reveal" id="creative-arts">
+            <div class="programme-detail__content">
+              <div class="programme-detail__header">
+                <div class="programme-detail__icon" style="--accent: var(--plum); --accent-bg: var(--lavender-light)">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 40l4-16L36 8l4 4-16 20-16 4z"/>
+                    <path d="M28 16l4 4"/>
+                    <circle cx="14" cy="38" r="2"/>
+                  </svg>
+                </div>
+                <h2 class="programme-detail__title">Creative arts, reading, and poetry</h2>
+              </div>
+              <p class="programme-detail__text">
+                Our creative programme makes arts, reading, and poetry a natural part of community life. Whether you are an experienced artist or have never picked up a paintbrush, our workshops are designed to be welcoming, expressive, and open to all.
+              </p>
+              <ul class="programme-detail__list" style="--accent: var(--lavender)">
+                <li>Art workshops with painting, drawing, and mixed media</li>
+                <li>Reading groups for all ages and interests</li>
+                <li>Poetry writing workshops and spoken word sessions</li>
+                <li>Community exhibitions and creative showcases</li>
+                <li>Creative activities for children and young people</li>
+              </ul>
+              <div class="programme-detail__outcomes">
+                <strong>Positive outcomes</strong>
+                <p>Participants discover new forms of self-expression, build confidence, and experience the joy of creative community.</p>
+              </div>
+              <a href="./contact.html" class="btn btn--primary">Enquire about this programme</a>
+            </div>
+            <div class="programme-detail__media">
+              <img src="./assets/creative-arts.png" alt="Community members enjoying a creative arts workshop" width="1024" height="1024" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--white" aria-label="Call to action">
+        <div class="container">
+          <div class="cta-section reveal">
+            <h2>Interested in one of our programmes?</h2>
+            <p>We would love to tell you more. Get in touch and we will help you find the right programme for you or your family.</p>
+            <div class="hero__actions">
+              <a class="btn btn--white btn--lg" href="./contact.html">Get in touch</a>
+              <a class="btn btn--ghost btn--lg" href="./get-involved.html">Volunteer with us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <strong>Friends of Fieldway</strong>
+            <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
+            <div class="newsletter" aria-label="Newsletter signup">
+              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
+              <button class="btn btn--sage btn--sm">Subscribe</button>
+            </div>
+          </div>
+          <div class="footer__col">
+            <strong>Quick Links</strong>
+            <a href="./">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./programmes.html">Programmes</a>
+            <a href="./events.html">Events</a>
+            <a href="./get-involved.html">Get Involved</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+          <div class="footer__col">
+            <strong>Contact</strong>
+            <a href="mailto:hello@friendsoffieldway.org">hello@friendsoffieldway.org</a>
+            <a href="tel:+440000000000">020 0000 0000</a>
+            <p>Fieldway Community Hub<br/>London, UK</p>
+          </div>
+          <div class="footer__col">
+            <strong>Follow Us</strong>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Photography from <a href="https://unsplash.com/license" target="_blank" rel="noreferrer">Unsplash</a> under the Unsplash License.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
