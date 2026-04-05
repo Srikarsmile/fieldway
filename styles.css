@@ -7,7 +7,7 @@
   --plum: #1B5E3B;
   --plum-dark: #15492E;
   --plum-light: rgba(27, 94, 59, 0.08);
-  --cream: #F7F2EB;
+  --cream: #F5F5F3;
   --lavender: #C5963A;
   --lavender-light: rgba(197, 150, 58, 0.18);
   --sage: #9CAF88;
@@ -15,7 +15,7 @@
   --teal: #6FA7A1;
   --teal-light: rgba(111, 167, 161, 0.15);
   --charcoal: #2E2A2F;
-  --grey: #6E6A70;
+  --grey: #555258;
   --white: #FFFFFF;
   --peach: #F2C6A6;
   --peach-light: rgba(242, 198, 166, 0.2);
@@ -33,31 +33,31 @@
   --border-strong: rgba(46, 42, 47, 0.16);
 
   --font-brand: 'Nunito', sans-serif;
-  --font-heading: 'Poppins', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --text-h1: clamp(2.75rem, 5vw, 3.75rem);
-  --text-h2: clamp(2rem, 3.5vw, 2.75rem);
-  --text-h3: clamp(1.5rem, 2.2vw, 1.75rem);
-  --text-h4: clamp(1.125rem, 1.5vw, 1.375rem);
-  --text-body-lg: 1.125rem;
+  --text-h1: clamp(3rem, 5.5vw, 4rem);
+  --text-h2: clamp(2.25rem, 4vw, 3rem);
+  --text-h3: clamp(1.625rem, 2.5vw, 1.875rem);
+  --text-h4: clamp(1.25rem, 1.8vw, 1.5rem);
+  --text-body-lg: 1.15rem;
   --text-body: 1rem;
   --text-small: 0.875rem;
-  --lh-heading: 1.2;
-  --lh-body: 1.7;
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 5rem;
 
   --radius-btn: 12px;
-  --radius-card: 18px;
+  --radius-card: 14px;
   --radius-input: 12px;
-  --radius-img: 20px;
+  --radius-img: 16px;
 
   --shadow-soft: 0 4px 20px rgba(46, 42, 47, 0.06);
   --shadow-card: 0 8px 30px rgba(46, 42, 47, 0.08);
@@ -67,7 +67,7 @@
   --duration-fast: 150ms;
   --duration-normal: 250ms;
 
-  --container-max: 1200px;
+  --container-max: 1280px;
   --container-padding: 1.5rem;
 }
 
@@ -174,7 +174,7 @@ button { font: inherit; cursor: pointer; }
 
 .section__header {
   max-width: 680px;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .section__header--center {
@@ -228,7 +228,7 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-size: var(--text-h2);
-  font-weight: 600;
+  font-weight: 700;
   line-height: var(--lh-heading);
   color: var(--charcoal);
 }
@@ -244,7 +244,7 @@ h3 {
 h4 {
   font-family: var(--font-heading);
   font-size: var(--text-h4);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--lh-heading);
   color: var(--charcoal);
 }
@@ -258,7 +258,7 @@ p { color: var(--grey); }
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(247, 242, 235, 0.92);
+  background: rgba(245, 245, 243, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -453,9 +453,10 @@ p { color: var(--grey); }
 /* ---------- Cards ---------- */
 .card {
   background: var(--white);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-card);
   padding: var(--space-lg);
+  box-shadow: var(--shadow-soft);
   transition: transform var(--duration-normal) var(--ease-out),
               box-shadow var(--duration-normal) var(--ease-out);
 }
@@ -782,7 +783,8 @@ p { color: var(--grey); }
   padding: var(--space-xl) var(--space-lg);
   border-radius: var(--radius-card);
   background: linear-gradient(135deg, rgba(27, 94, 59, 0.04), rgba(197, 150, 58, 0.06));
-  border: 1px solid var(--border);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .stat {
@@ -855,14 +857,14 @@ p { color: var(--grey); }
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
 .hero__media {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
-  border-radius: 28px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-card);
 }
@@ -881,7 +883,7 @@ p { color: var(--grey); }
   right: 0;
   height: 40%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.18), transparent);
-  border-radius: 0 0 28px 28px;
+  border-radius: 0 0 20px 20px;
   pointer-events: none;
   z-index: 2;
 }
@@ -976,9 +978,10 @@ p { color: var(--grey); }
 
 .mini-card {
   background: var(--white);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-card);
   padding: var(--space-lg);
+  box-shadow: var(--shadow-soft);
   transition: transform var(--duration-normal) var(--ease-out),
               box-shadow var(--duration-normal) var(--ease-out);
 }
@@ -1148,10 +1151,11 @@ p { color: var(--grey); }
 
 .value-card {
   background: var(--white);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-card);
   padding: var(--space-lg);
   text-align: center;
+  box-shadow: var(--shadow-soft);
   transition: transform var(--duration-normal) var(--ease-out),
               box-shadow var(--duration-normal) var(--ease-out);
 }
