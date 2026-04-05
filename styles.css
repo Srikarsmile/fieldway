@@ -1388,13 +1388,10 @@ p { color: var(--grey); }
   margin-bottom: var(--space-xl);
 }
 
-.footer__brand strong {
-  display: block;
-  font-family: var(--font-brand);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  margin-bottom: 4px;
+.footer__brand .brand { margin-bottom: var(--space-sm); }
+.footer__brand .brand__text strong {
+  color: var(--white);
+  font-size: 1.6rem;
 }
 
 .footer__brand p {
