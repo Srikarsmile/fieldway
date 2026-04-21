@@ -63,182 +63,208 @@
     <!-- ===== MAIN ===== -->
     <main id="main">
 
-      <!-- HERO -->
+      <!-- 1. HERO -->
       <section class="hero reveal" aria-label="Hero">
         <div class="container">
-          <p class="hero__eyebrow">A new community hub for Fieldway</p>
-          <h1 class="hero__title">A welcoming space for learning, wellbeing, and community</h1>
+          <p class="hero__eyebrow">Real people. Real community. Real change.</p>
+          <h1 class="hero__title">Bringing Fieldway together</h1>
           <p class="hero__subtitle">
-            Friends of Fieldway is a community hub offering educational support, mentoring, wellbeing sessions, social activities, and creative programmes for local residents of all ages.
+            Events, support, and opportunities for local families, neighbours, and young people in Fieldway.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="./programmes.html">Explore our programmes</a>
-            <a class="btn btn--secondary btn--lg" href="./get-involved.html">Get involved</a>
+            <a class="btn btn--primary btn--lg" href="./get-involved.html">Join our community</a>
+            <a class="btn btn--secondary btn--lg" href="./events.html">Upcoming events</a>
+            <a class="btn btn--ghost btn--lg" href="./get-involved.html">Get involved</a>
           </div>
           <div class="hero__media">
-            <img src="./assets/hero-community.jpg" alt="Community members talking and laughing together in a welcoming, sunlit room" width="1600" height="1067" loading="eager" />
+            <img src="./assets/hero-community.jpg" alt="Neighbours of all ages gathered at a Fieldway community event" width="1600" height="1067" loading="eager" />
             <article class="hero__floating hero__floating--top">
-              <span class="hero__floating-label">Education</span>
-              <span class="hero__floating-text">Homework club, tutoring, and mentoring after school</span>
+              <span class="hero__floating-label">Connection</span>
+              <span class="hero__floating-text">Events, support, and friendships on your doorstep</span>
             </article>
             <article class="hero__floating hero__floating--bottom">
-              <span class="hero__floating-label">Connection</span>
-              <span class="hero__floating-text">Groups, tea mornings, creative sessions, and support</span>
+              <span class="hero__floating-label">Belonging</span>
+              <span class="hero__floating-text">A space for families, young people, and everyone in between</span>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- STATS STRIP -->
-      <section class="section section--white" aria-label="Key figures">
-        <div class="container">
-          <div class="stats-strip reveal">
-            <div class="stat">
-              <span class="stat__number" data-target="7">0</span>
-              <p class="stat__label">Programme strands for the community</p>
-            </div>
-            <div class="stat">
-              <span class="stat__number" data-target="4">0</span>
-              <p class="stat__label">Age groups supported under one roof</p>
-            </div>
-            <div class="stat">
-              <p class="stat__tagline">One shared mission</p>
-              <p class="stat__label">Learn, connect, and grow together in a space that belongs to everyone</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROGRAMMES OVERVIEW -->
-      <section class="section section--white reveal" id="programmes-overview" aria-label="Our programmes">
+      <!-- 2. WHAT IS THIS? -->
+      <section class="section section--white reveal" aria-label="What is this">
         <div class="container">
           <div class="section__header section__header--center">
-            <p class="section__eyebrow">What we offer</p>
-            <h2 class="section__title">Programmes for every generation</h2>
+            <p class="section__eyebrow">What is this?</p>
+            <h2 class="section__title">A space for Fieldway to come together</h2>
             <p class="section__subtitle">
-              From homework support to creative workshops, we provide meaningful activities that help people learn, connect, and thrive.
+              Fieldway is full of amazing people, but not everyone feels connected. This space is about bringing people together, building relationships, and creating opportunities for families and young people in our community.
             </p>
-          </div>
-
-          <div class="programme-grid">
-            <!-- Homework Club -->
-            <article class="card card--programme reveal" style="--accent: var(--sage); --accent-bg: var(--sage-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 10h36v30H6z"/>
-                  <path d="M6 10l18 12L42 10"/>
-                  <path d="M14 22v10"/>
-                  <path d="M20 22v10"/>
-                  <path d="M14 27h6"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Homework Club</h3>
-              <p class="card__text">A calm, structured space for pupils to focus on schoolwork with help from trained volunteers.</p>
-              <a href="./programmes.html#homework-club" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Tutoring & Mentoring -->
-            <article class="card card--programme reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="18" cy="14" r="6"/>
-                  <circle cx="34" cy="16" r="5"/>
-                  <path d="M8 38v-4a10 10 0 0 1 10-10h0"/>
-                  <path d="M26 38v-3a8 8 0 0 1 8-8h0"/>
-                  <path d="M22 24l4-2"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Tutoring and mentoring</h3>
-              <p class="card__text">One-to-one academic support, exam preparation, and personal development guidance.</p>
-              <a href="./programmes.html#tutoring-mentoring" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Youth Activities -->
-            <article class="card card--programme reveal" style="--accent: var(--peach-dark); --accent-bg: var(--peach-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 4l5.5 11.2L42 17l-9 8.8L35 38 24 32.2 13 38l2-12.2-9-8.8 12.5-1.8z"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Youth activities</h3>
-              <p class="card__text">Creative workshops, group discussions, life skills, sports, and leadership opportunities.</p>
-              <a href="./programmes.html#youth-activities" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Women's Group -->
-            <article class="card card--programme reveal" style="--accent: var(--plum); --accent-bg: var(--lavender-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 34C14 34 8 28 8 20s6-14 16-14 16 6 16 14-6 14-16 14z"/>
-                  <path d="M16 20c0-2 3.6-6 8-6s8 4 8 6"/>
-                  <path d="M19 25a6 6 0 0 0 10 0"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Women's group</h3>
-              <p class="card__text">Wellbeing sessions, parenting support, skills workshops, and social gatherings.</p>
-              <a href="./programmes.html#womens-group" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Men's Group -->
-            <article class="card card--programme reveal" style="--accent: var(--mustard-dark); --accent-bg: var(--mustard-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 28c0 0 4-4 12-4s12 4 12 4"/>
-                  <path d="M18 18a6 6 0 0 1 12 0"/>
-                  <path d="M16 36h16"/>
-                  <path d="M20 36v4"/>
-                  <path d="M28 36v4"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Men's group</h3>
-              <p class="card__text">Discussion forums, personal development, volunteering, and recreational activities.</p>
-              <a href="./programmes.html#mens-group" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Elderly Engagement -->
-            <article class="card card--programme reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 36V22a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v14"/>
-                  <path d="M10 36h28"/>
-                  <ellipse cx="24" cy="12" rx="4" ry="3"/>
-                  <path d="M18 28h12"/>
-                  <path d="M18 32h8"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Elderly engagement</h3>
-              <p class="card__text">Tea mornings, social meetups, wellness sessions, storytelling, and arts and crafts.</p>
-              <a href="./programmes.html#elderly-engagement" class="card__link">Learn more</a>
-            </article>
-
-            <!-- Creative Arts -->
-            <article class="card card--programme reveal" style="--accent: var(--plum); --accent-bg: var(--lavender-light)">
-              <div class="card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 40l4-16L36 8l4 4-16 20-16 4z"/>
-                  <path d="M28 16l4 4"/>
-                  <circle cx="14" cy="38" r="2"/>
-                </svg>
-              </div>
-              <h3 class="card__title">Creative arts, reading, and poetry</h3>
-              <p class="card__text">Art workshops, painting, reading groups, poetry writing, and spoken word sessions.</p>
-              <a href="./programmes.html#creative-arts" class="card__link">Learn more</a>
-            </article>
           </div>
         </div>
       </section>
 
-      <!-- GET INVOLVED CTA -->
+      <!-- 3. WHY DOES THIS MATTER? -->
+      <section class="section section--cream reveal" aria-label="Why this matters">
+        <div class="container">
+          <div class="section__header section__header--center">
+            <p class="section__eyebrow">Why does this matter?</p>
+            <h2 class="section__title">Because everyone deserves to feel&hellip;</h2>
+          </div>
+          <div class="values-grid values-grid--three">
+            <div class="value-card reveal">
+              <div class="value-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 24c4-8 11-12 20-12s16 4 20 12c-4 8-11 12-20 12s-16-4-20-12z"/>
+                  <circle cx="24" cy="24" r="5"/>
+                </svg>
+              </div>
+              <h4>Seen</h4>
+              <p>Known by name, noticed when you walk through the door.</p>
+            </div>
+            <div class="value-card reveal">
+              <div class="value-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="16" cy="16" r="6"/>
+                  <circle cx="32" cy="16" r="6"/>
+                  <path d="M6 38v-2c0-5 4-8 10-8s10 3 10 8v2"/>
+                  <path d="M22 38v-2c0-5 4-8 10-8s10 3 10 8v2"/>
+                </svg>
+              </div>
+              <h4>Included</h4>
+              <p>Whoever you are, wherever you're from, you're welcome here.</p>
+            </div>
+            <div class="value-card reveal">
+              <div class="value-card__icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
+                </svg>
+              </div>
+              <h4>Part of something</h4>
+              <p>Whether you've lived here for years or just arrived, this is for you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. COMMUNITY IN ACTION -->
+      <section class="section section--white reveal" aria-label="Our community in action">
+        <div class="container">
+          <div class="section__header section__header--center">
+            <p class="section__eyebrow">Community in action</p>
+            <h2 class="section__title">Our community</h2>
+            <p class="section__subtitle">
+              Real photos from real moments &mdash; events, art, families, and neighbours of all ages making Fieldway feel like home.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item gallery-item--tall reveal">
+              <img src="./assets/hero-community.jpg" alt="Community members gathered together" loading="lazy" />
+              <figcaption class="gallery-item__caption">Events</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <img src="./assets/creative-arts.png" alt="Art and creative projects in the community" loading="lazy" />
+              <figcaption class="gallery-item__caption">Art</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <img src="./assets/hero-learning.jpg" alt="Local families spending time together" loading="lazy" />
+              <figcaption class="gallery-item__caption">Families</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <img src="./assets/hero-elders.jpg" alt="Older and younger neighbours side by side" loading="lazy" />
+              <figcaption class="gallery-item__caption">Young and old together</figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--wide reveal">
+              <img src="./assets/hero-arts.jpg" alt="Fieldway allotment project launching in May" loading="lazy" />
+              <figcaption class="gallery-item__caption">
+                <span>Allotment project</span>
+                <span class="gallery-item__meta">From 6 May</span>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="gallery-note">Real photos coming soon &mdash; we're capturing moments as the community grows.</p>
+        </div>
+      </section>
+
+      <!-- 5. REAL STORIES -->
+      <section class="section section--cream reveal" aria-label="Real stories from the community">
+        <div class="container">
+          <div class="section__header section__header--center">
+            <p class="section__eyebrow">Real stories</p>
+            <h2 class="section__title">Voices from Fieldway</h2>
+            <p class="section__subtitle">
+              What actual neighbours are saying. We'll keep adding new voices as we collect them.
+            </p>
+          </div>
+          <div class="testimonial-grid">
+            <article class="card card--testimonial reveal">
+              <p class="card__text">Before this, I didn't really know anyone locally. Now I see familiar faces every week.</p>
+              <p class="card__author">Local resident</p>
+              <p class="card__role">Fieldway</p>
+            </article>
+            <article class="card card--testimonial reveal">
+              <p class="card__text">It's brought people together in a way we really needed.</p>
+              <p class="card__author">Local resident</p>
+              <p class="card__role">Fieldway</p>
+            </article>
+            <article class="card card--testimonial reveal">
+              <p class="card__text">My kids actually look forward to community events now &mdash; that means everything.</p>
+              <p class="card__author">Parent</p>
+              <p class="card__role">Fieldway</p>
+            </article>
+          </div>
+          <div class="story-cta reveal">
+            <h3>Your story?</h3>
+            <p>If something here has mattered to you, we'd love to hear about it.</p>
+            <a class="btn btn--primary" href="./contact.html">Share your story</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. WHY THIS STARTED -->
+      <section class="section section--white reveal" aria-label="Why this started">
+        <div class="container">
+          <div class="about-story about-story--single">
+            <div class="about-story__content">
+              <p class="section__eyebrow">Why this started</p>
+              <h2 class="section__title">From a simple place &mdash; wanting better for our community</h2>
+              <p>
+                This started from a simple place: wanting better for our community. Wanting people to feel connected, supported, and included.
+              </p>
+              <p>
+                Not just events, but something that genuinely brings people together.
+              </p>
+              <p>
+                <strong>And this is just the beginning.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. GET INVOLVED -->
       <section class="section section--plum reveal" aria-label="Get involved">
         <div class="container">
           <div class="section__header section__header--center">
             <p class="section__eyebrow">Get involved</p>
-            <h2 class="section__title">Help shape a community hub that makes a real difference</h2>
+            <h2 class="section__title">There's a place for everyone</h2>
             <p class="section__subtitle">
-              Friends of Fieldway grows stronger with local partners, volunteers, and supporters behind it. There are many ways to contribute.
+              Whatever you can give &mdash; time, ideas, or just showing up &mdash; it all helps.
             </p>
           </div>
-          <div class="involvement-grid">
+          <div class="involvement-grid involvement-grid--four">
+            <div class="card card--involvement reveal">
+              <div class="card__icon" style="--accent: var(--lavender); --accent-bg: rgba(255,255,255,0.15)">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="10" width="36" height="30" rx="3"/>
+                  <path d="M6 18h36"/>
+                  <path d="M16 6v8"/>
+                  <path d="M32 6v8"/>
+                </svg>
+              </div>
+              <h4 class="card__title">Join an event</h4>
+              <p class="card__text">Come along, bring a friend, meet the neighbours.</p>
+              <a href="./events.html" class="card__link">See what's on</a>
+            </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--lavender); --accent-bg: rgba(255,255,255,0.15)">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -247,72 +273,67 @@
                 </svg>
               </div>
               <h4 class="card__title">Volunteer</h4>
-              <p class="card__text">Tutors, mentors, facilitators, and artists can widen what the hub offers to the community.</p>
-              <a href="./get-involved.html" class="card__link">Find out more</a>
+              <p class="card__text">Help run events, mentor, or lend a hand behind the scenes.</p>
+              <a href="./get-involved.html" class="card__link">Get started</a>
             </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--lavender); --accent-bg: rgba(255,255,255,0.15)">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 24c0 0 6-6 18-6s18 6 18 6"/>
-                  <path d="M6 24c0 0 6 6 18 6s18-6 18-6"/>
-                  <path d="M24 18v12"/>
+                  <path d="M24 6a18 18 0 0 0-18 18c0 4 2 8 4 10l-2 6 6-2c3 2 6 2 10 2a18 18 0 0 0 0-34z"/>
+                  <path d="M16 24h16"/>
+                  <path d="M16 18h16"/>
                 </svg>
               </div>
-              <h4 class="card__title">Partner with us</h4>
-              <p class="card__text">Schools, community groups, and local organisations can help shape and strengthen our programmes.</p>
-              <a href="./get-involved.html" class="card__link">Find out more</a>
+              <h4 class="card__title">Share your ideas</h4>
+              <p class="card__text">Tell us what's missing. The best ideas come from the people who live here.</p>
+              <a href="./contact.html" class="card__link">Get in touch</a>
             </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--lavender); --accent-bg: rgba(255,255,255,0.15)">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 6C14 6 8 14 8 22c0 6 4 10 8 14l8 8 8-8c4-4 8-8 8-14 0-8-6-16-16-16z"/>
-                  <path d="M20 22l3 3 6-6"/>
+                  <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
                 </svg>
               </div>
-              <h4 class="card__title">Support the vision</h4>
-              <p class="card__text">Back the long-term case for a building that serves every generation in the community.</p>
+              <h4 class="card__title">Support others</h4>
+              <p class="card__text">Check in on a neighbour, offer a lift, or share what you have.</p>
               <a href="./get-involved.html" class="card__link">Find out more</a>
             </div>
+          </div>
+          <div class="section__footer-cta">
+            <a class="btn btn--white btn--lg" href="./get-involved.html">Join us</a>
           </div>
         </div>
       </section>
 
-      <!-- TESTIMONIALS -->
-      <section class="section section--white reveal" aria-label="Testimonials">
+      <!-- 8. PARTNERS -->
+      <section class="section section--white reveal" aria-label="Partners">
         <div class="container">
           <div class="section__header section__header--center">
-            <p class="section__eyebrow">Community voices</p>
-            <h2 class="section__title">What people say about us</h2>
+            <p class="section__eyebrow">Partners</p>
+            <h2 class="section__title">Working together</h2>
+            <p class="section__subtitle">
+              We're building relationships with the people and places that already make Fieldway tick. Logos will be added as partnerships grow.
+            </p>
           </div>
-          <div class="testimonial-grid">
-            <article class="card card--testimonial reveal">
-              <p class="card__text">My daughter's confidence has grown so much since joining the homework club. She actually looks forward to doing her schoolwork now. This place has been a blessing for our family.</p>
-              <p class="card__author">Sarah M.</p>
-              <p class="card__role">Parent</p>
-            </article>
-            <article class="card card--testimonial reveal">
-              <p class="card__text">The men's group gave me a reason to get out of the house again. I've met people I can actually talk to, and it's helped me feel more like myself. I wish I'd found it sooner.</p>
-              <p class="card__author">David K.</p>
-              <p class="card__role">Community member</p>
-            </article>
-            <article class="card card--testimonial reveal">
-              <p class="card__text">Volunteering here has been one of the most rewarding things I've done. You can see the difference it makes in people's lives, especially the young people. The whole team genuinely cares.</p>
-              <p class="card__author">Amina R.</p>
-              <p class="card__role">Volunteer tutor</p>
-            </article>
+          <div class="partners-grid">
+            <div class="partner-placeholder">Schools</div>
+            <div class="partner-placeholder">Churches</div>
+            <div class="partner-placeholder">Local organisations</div>
+            <div class="partner-placeholder">Community groups</div>
           </div>
         </div>
       </section>
 
-      <!-- FINAL CTA -->
-      <section class="section section--cream" aria-label="Call to action">
+      <!-- 9. FOUNDED BY & CONTACT -->
+      <section class="section section--cream" aria-label="Founded by the community">
         <div class="container">
-          <div class="cta-section reveal">
-            <h2>Ready to be part of something meaningful?</h2>
-            <p>Whether you want to join a programme, volunteer your time, or simply learn more about what we do, we would love to hear from you.</p>
+          <div class="cta-section cta-section--light reveal">
+            <p class="section__eyebrow">Founded by</p>
+            <h2>Roy &amp; the local community</h2>
+            <p>Have an idea, question, or something to share? We'd love to hear from you.</p>
             <div class="hero__actions">
-              <a class="btn btn--white btn--lg" href="./contact.html">Get in touch</a>
-              <a class="btn btn--ghost btn--lg" href="./get-involved.html">Volunteer with us</a>
+              <a class="btn btn--primary btn--lg" href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
+              <a class="btn btn--secondary btn--lg" href="./contact.html">Other ways to reach us</a>
             </div>
           </div>
         </div>
