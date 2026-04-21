@@ -26,6 +26,7 @@
     }
     </script>
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preload" as="image" href="./assets/hero-community.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -66,23 +67,24 @@
       <!-- 1. HERO -->
       <section class="hero reveal" aria-label="Hero">
         <div class="container">
-          <p class="hero__eyebrow">Real people. Real community. Real change.</p>
+          <p class="hero__eyebrow">Fieldway Community</p>
           <h1 class="hero__title">Bringing Fieldway together</h1>
           <p class="hero__subtitle">
             Events, support, and opportunities for local families, neighbours, and young people in Fieldway.
           </p>
+          <span class="hero__tagline">Real people. Real community. Real change.</span>
           <div class="hero__actions">
             <a class="btn btn--primary btn--lg" href="./get-involved.html">Join our community</a>
             <a class="btn btn--secondary btn--lg" href="./events.html">Upcoming events</a>
-            <a class="btn btn--secondary btn--lg" href="./get-involved.html">Get involved</a>
           </div>
+          <a class="hero__inline-link" href="./get-involved.html">Or get involved</a>
           <div class="hero__media">
-            <img src="./assets/hero-community.jpg" alt="Neighbours of all ages gathered at a Fieldway community event" width="1600" height="1067" loading="eager" />
-            <article class="hero__floating hero__floating--top">
+            <img src="./assets/hero-community.jpg" alt="Neighbours of all ages gathered at a Fieldway community event" width="1600" height="1067" loading="eager" fetchpriority="high" />
+            <article class="hero__floating hero__floating--top reveal reveal--left">
               <span class="hero__floating-label">Connection</span>
               <span class="hero__floating-text">Events, support, and friendships on your doorstep</span>
             </article>
-            <article class="hero__floating hero__floating--bottom">
+            <article class="hero__floating hero__floating--bottom reveal reveal--right">
               <span class="hero__floating-label">Belonging</span>
               <span class="hero__floating-text">A space for families, young people, and everyone in between</span>
             </article>
@@ -100,6 +102,25 @@
               Fieldway is full of amazing people, but not everyone feels connected. This space is about bringing people together, building relationships, and creating opportunities for families and young people in our community.
             </p>
           </div>
+          <div class="decor-band" aria-hidden="true">
+            <span class="decor-band__line"></span>
+            <span class="decor-band__dot decor-band__dot--plum">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </span>
+            <span class="decor-band__dot decor-band__dot--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/><path d="M15 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </span>
+            <span class="decor-band__dot decor-band__dot--mustard">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+            </span>
+            <span class="decor-band__dot decor-band__dot--sage">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 10a7 7 0 0 1 14 0"/><path d="M5 10c0 4 3 7 7 11"/><path d="M19 10c0 4-3 7-7 11"/></svg>
+            </span>
+            <span class="decor-band__dot decor-band__dot--peach">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v-2a4 4 0 0 1 8 0v2"/><path d="M6 13h12l-1 7H7z"/><path d="M12 3v3"/></svg>
+            </span>
+            <span class="decor-band__line"></span>
+          </div>
         </div>
       </section>
 
@@ -111,7 +132,7 @@
             <h2 class="section__title">Because everyone deserves to feel&hellip;</h2>
           </div>
           <div class="values-grid values-grid--three">
-            <div class="value-card reveal">
+            <div class="value-card reveal" style="--accent: var(--plum); --accent-bg: var(--plum-light)">
               <div class="value-card__icon">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 24c4-8 11-12 20-12s16 4 20 12c-4 8-11 12-20 12s-16-4-20-12z"/>
@@ -121,7 +142,7 @@
               <h4>Seen</h4>
               <p>Known by name, noticed when you walk through the door.</p>
             </div>
-            <div class="value-card reveal">
+            <div class="value-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
               <div class="value-card__icon">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="16" cy="16" r="6"/>
@@ -133,7 +154,7 @@
               <h4>Included</h4>
               <p>Whoever you are, wherever you're from, you're welcome here.</p>
             </div>
-            <div class="value-card reveal">
+            <div class="value-card reveal" style="--accent: var(--lavender); --accent-bg: var(--lavender-light)">
               <div class="value-card__icon">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
@@ -158,23 +179,23 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-item gallery-item--tall reveal">
-              <img src="./assets/hero-community.jpg" alt="Community members gathered together" loading="lazy" />
+              <img src="./assets/hero-arts.jpg" alt="Community members gathered at a Fieldway event" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Events</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/creative-arts.png" alt="Art and creative projects in the community" loading="lazy" />
+              <img src="./assets/creative-arts.webp" alt="Art and creative projects in the community" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Art</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/hero-learning.jpg" alt="Local families spending time together" loading="lazy" />
+              <img src="./assets/hero-learning.jpg" alt="Local families spending time together" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Families</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/hero-elders.jpg" alt="Older and younger neighbours side by side" loading="lazy" />
-              <figcaption class="gallery-item__caption">Young and old together</figcaption>
+              <img src="./assets/hero-elders.jpg" alt="Older and younger neighbours side by side" loading="lazy" decoding="async" />
+              <figcaption class="gallery-item__caption">Young &amp; old</figcaption>
             </figure>
             <figure class="gallery-item gallery-item--wide reveal">
-              <img src="./assets/hero-arts.jpg" alt="Fieldway allotment project launching in May" loading="lazy" />
+              <img src="./assets/learning-space.webp" alt="Fieldway allotment project launching in May" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">
                 <span>Allotment project</span>
                 <span class="gallery-item__meta">From 6 May</span>
@@ -223,18 +244,18 @@
       <!-- 6. WHY THIS STARTED -->
       <section class="section section--white reveal" aria-label="Why this started">
         <div class="container">
-          <div class="about-story about-story--single">
-            <div class="about-story__content">
-              <p class="section__eyebrow">Why this started</p>
+          <div class="story-layout">
+            <div class="story-pull reveal reveal--left">
+              And this is just<br/>the beginning.
+              <span>Why this started</span>
+            </div>
+            <div class="story-body reveal reveal--right">
               <h2 class="section__title">From a simple place &mdash; wanting better for our community</h2>
               <p>
                 This started from a simple place: wanting better for our community. Wanting people to feel connected, supported, and included.
               </p>
               <p>
-                Not just events, but something that genuinely brings people together.
-              </p>
-              <p>
-                <strong>And this is just the beginning.</strong>
+                Not just events, but something that genuinely <strong>brings people together</strong>.
               </p>
             </div>
           </div>
@@ -316,24 +337,76 @@
             </p>
           </div>
           <div class="partners-grid">
-            <div class="partner-placeholder">Schools</div>
-            <div class="partner-placeholder">Churches</div>
-            <div class="partner-placeholder">Local organisations</div>
-            <div class="partner-placeholder">Community groups</div>
+            <div class="partner-card reveal" style="--accent: var(--sage); --accent-bg: var(--sage-light)">
+              <span class="partner-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/>
+                </svg>
+              </span>
+              <div>
+                <span class="partner-card__title">Schools</span>
+                <span class="partner-card__text">Connecting with local primaries and secondaries to support young people.</span>
+              </div>
+            </div>
+            <div class="partner-card reveal" style="--accent: var(--plum); --accent-bg: var(--plum-light)">
+              <span class="partner-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 22V10l6-7 6 7v12"/>
+                  <path d="M10 22v-6h4v6"/>
+                  <path d="M12 3v7"/>
+                </svg>
+              </span>
+              <div>
+                <span class="partner-card__title">Churches</span>
+                <span class="partner-card__text">Shared values and shared spaces with faith communities across Fieldway.</span>
+              </div>
+            </div>
+            <div class="partner-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
+              <span class="partner-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18"/>
+                  <path d="M5 21V7l7-4 7 4v14"/>
+                  <path d="M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"/>
+                </svg>
+              </span>
+              <div>
+                <span class="partner-card__title">Local organisations</span>
+                <span class="partner-card__text">Working alongside the groups already doing brilliant work in the area.</span>
+              </div>
+            </div>
+            <div class="partner-card reveal" style="--accent: var(--lavender); --accent-bg: var(--lavender-light)">
+              <span class="partner-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="7" r="4"/>
+                  <circle cx="17" cy="7" r="3"/>
+                  <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/>
+                  <path d="M16 21v-2a4 4 0 0 0-2-3"/>
+                </svg>
+              </span>
+              <div>
+                <span class="partner-card__title">Community groups</span>
+                <span class="partner-card__text">Residents' associations, youth groups, and grassroots initiatives.</span>
+              </div>
+            </div>
           </div>
+          <p class="partners-note">Are you part of a local partner and want to collaborate? <a class="hero__inline-link" href="./contact.html">Let's talk</a></p>
         </div>
       </section>
 
       <!-- 9. FOUNDED BY & CONTACT -->
       <section class="section section--cream" aria-label="Founded by the community">
         <div class="container">
-          <div class="cta-section cta-section--light reveal">
+          <div class="founder-closer reveal">
+            <div class="founder-avatar" aria-hidden="true">
+              <img src="./assets/logo.png" alt="" width="64" height="64" />
+            </div>
             <p class="section__eyebrow">Founded by</p>
             <h2>Roy &amp; the local community</h2>
             <p>Have an idea, question, or something to share? We'd love to hear from you.</p>
             <div class="hero__actions">
-              <a class="btn btn--primary btn--lg" href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
-              <a class="btn btn--secondary btn--lg" href="./contact.html">Other ways to reach us</a>
+              <a class="btn btn--white btn--lg" href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
+              <a class="btn btn--outline-light btn--lg" href="./contact.html">Other ways to reach us</a>
             </div>
           </div>
         </div>
