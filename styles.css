@@ -206,7 +206,7 @@ button { font: inherit; cursor: pointer; }
 
 .section__eyebrow {
   display: inline-block;
-  margin-bottom: var(--space-xs);
+  margin: 0 0 var(--space-xs);
   font-family: var(--font-body);
   font-size: var(--text-small);
   font-weight: 600;
@@ -218,6 +218,7 @@ button { font: inherit; cursor: pointer; }
 .section--plum .section__eyebrow { color: var(--lavender); }
 
 .section__title {
+  margin: 0;
   font-family: var(--font-heading);
   font-size: var(--text-h2);
   font-weight: 700;
@@ -228,10 +229,15 @@ button { font: inherit; cursor: pointer; }
 .section--plum .section__title { color: var(--white); }
 
 .section__subtitle {
-  margin-top: var(--space-sm);
+  margin: var(--space-sm) 0 0;
   font-size: var(--text-body-lg);
   color: var(--grey);
   max-width: 60ch;
+}
+
+.section__header--center .section__subtitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section__subtitle--wide { max-width: 100%; }
@@ -2327,9 +2333,9 @@ p { color: var(--grey); }
 
 @media (max-width: 480px) {
   :root {
-    --text-h1: clamp(2.25rem, 11vw, 2.75rem);
-    --text-h2: clamp(1.85rem, 8vw, 2.25rem);
-    --text-body-lg: 1rem;
+    --text-h1: clamp(2.1rem, 10vw, 2.5rem);
+    --text-h2: clamp(1.7rem, 6.8vw, 2rem);
+    --text-body-lg: 0.98rem;
     --space-3xl: 3rem;
     --space-2xl: 2rem;
     --space-xl: 1.5rem;
@@ -2338,10 +2344,34 @@ p { color: var(--grey); }
   /* Hero */
   .hero { padding: var(--space-xl) 0 var(--space-lg); }
 
+  .section {
+    padding: 2.35rem 0;
+  }
+
+  .hero + .section {
+    padding-top: 2.15rem;
+  }
+
+  .section__header {
+    margin-bottom: var(--space-md);
+  }
+
+  .section__eyebrow {
+    margin-bottom: 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .section__title {
+    max-width: 17ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.14;
+  }
+
   .hero__title {
-    max-width: 9ch;
-    font-size: clamp(2rem, 10vw, 2.4rem);
-    line-height: 1.08;
+    max-width: 10ch;
+    font-size: clamp(2rem, 9.5vw, 2.3rem);
+    line-height: 1.1;
   }
 
   .page-hero__title {
@@ -2355,8 +2385,9 @@ p { color: var(--grey); }
   .hero__subtitle,
   .page-hero__subtitle,
   .section__subtitle {
-    max-width: 30ch;
-    font-size: 1rem;
+    max-width: 32ch;
+    font-size: 0.96rem;
+    line-height: 1.52;
   }
 
   .hero__actions {
