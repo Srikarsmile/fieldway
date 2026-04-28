@@ -1925,9 +1925,9 @@ p { color: var(--grey); }
 /* ---------- Home: Partner cards ---------- */
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-md);
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -1935,9 +1935,12 @@ p { color: var(--grey); }
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  min-width: 0;
+  min-height: 132px;
   padding: var(--space-md) var(--space-lg);
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent, var(--plum));
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-soft);
   transition: transform var(--duration-normal) var(--ease-out),
@@ -1955,27 +1958,34 @@ p { color: var(--grey); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
   border-radius: 12px;
   background: var(--accent-bg, var(--plum-light));
   color: var(--accent, var(--plum));
 }
 
-.partner-card__icon svg { width: 24px; height: 24px; }
+.partner-card__icon svg { width: 23px; height: 23px; }
+
+.partner-card__body {
+  min-width: 0;
+}
 
 .partner-card__title {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
+  line-height: 1.2;
   font-weight: 700;
   color: var(--charcoal);
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 .partner-card__text {
-  font-size: var(--text-small);
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.55;
   color: var(--grey);
 }
 
@@ -2116,13 +2126,6 @@ p { color: var(--grey); }
 .section__footer-cta {
   margin-top: var(--space-xl);
   text-align: center;
-}
-
-/* ---------- Home: Partners ---------- */
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
 }
 
 .partner-placeholder {
@@ -2391,8 +2394,11 @@ p { color: var(--grey); }
   .decor-band__line { width: 24px; }
   .decor-band__dot { width: 48px; height: 48px; }
 
-  /* Partner card stacks content */
-  .partner-card { padding: var(--space-sm) var(--space-md); }
+  /* Partner cards */
+  .partner-card {
+    align-items: flex-start;
+    padding: var(--space-md);
+  }
 
   /* Founder closer — tighter padding */
   .founder-closer { padding: var(--space-2xl) var(--space-md); }
