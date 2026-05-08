@@ -355,43 +355,4 @@
     });
   });
 
-  document.querySelectorAll(".newsletter[data-mailto]").forEach((form) => {
-    const email = form.querySelector('input[type="email"]');
-    let status = form.querySelector(".newsletter__status");
-
-    if (!email) return;
-
-    if (!status) {
-      status = document.createElement("span");
-      status.className = "newsletter__status sr-only";
-      status.setAttribute("aria-live", "polite");
-      form.append(status);
-    }
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const value = email.value.trim();
-
-      if (!emailPattern.test(value)) {
-        email.classList.add("is-error");
-        email.focus();
-        status.textContent = "Please enter a valid email address.";
-        return;
-      }
-
-      email.classList.remove("is-error");
-      window.location.href = buildMailto(
-        form.dataset.mailto,
-        form.dataset.subjectPrefix || "Programme updates",
-        `Please add this email address to programme updates: ${value}`
-      );
-      status.textContent = "Your email app should open with an updates request.";
-      email.value = "";
-    });
-
-    email.addEventListener("input", () => {
-      email.classList.remove("is-error");
-      status.textContent = "";
-    });
-  });
 })();
