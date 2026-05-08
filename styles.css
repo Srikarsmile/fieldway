@@ -1546,8 +1546,6 @@ p { color: var(--grey); }
   margin-bottom: var(--space-xs);
   color: var(--charcoal);
 }
-.contact-details .map-placeholder { margin-top: var(--space-md); }
-
 .contact-note p {
   margin-bottom: var(--space-xs);
 }
@@ -1585,19 +1583,6 @@ p { color: var(--grey); }
 }
 
 .contact-item a:hover { text-decoration: underline; }
-
-.map-placeholder {
-  width: 100%;
-  height: 240px;
-  background: var(--cream);
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-img);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--grey);
-  font-size: var(--text-small);
-}
 
 /* ---------- Newsletter ---------- */
 .newsletter {
