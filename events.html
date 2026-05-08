@@ -4,26 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events | Friends of Fieldway</title>
-    <meta name="description" content="Explore upcoming events at Friends of Fieldway: workshops, social gatherings, youth sessions, creative arts, and community wellbeing activities." />
+    <meta name="description" content="Explore planned and regular activity ideas at Friends of Fieldway. Email us to confirm current sessions, dates, locations, and facilitators." />
     <meta property="og:title" content="Events | Friends of Fieldway" />
-    <meta property="og:description" content="Explore upcoming events at Friends of Fieldway: workshops, social gatherings, youth sessions, creative arts, and community wellbeing activities." />
+    <meta property="og:description" content="Explore planned and regular activity ideas at Friends of Fieldway. Email us to confirm current sessions, dates, locations, and facilitators." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Friends of Fieldway" />
-    <meta property="og:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Friends of Fieldway logo" />
-    <meta property="og:url" content="https://charity-five-rho.vercel.app/events.html" />
+    <meta property="og:image" content="https://friendsoffieldway.org/assets/fun-day.webp" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="842" />
+    <meta property="og:image:alt" content="Families and neighbours at a Friends of Fieldway community fun day" />
+    <meta property="og:url" content="https://friendsoffieldway.org/events.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Events | Friends of Fieldway" />
-    <meta name="twitter:description" content="Explore upcoming events at Friends of Fieldway: workshops, social gatherings, youth sessions, creative arts, and community wellbeing activities." />
-    <meta name="twitter:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <link rel="canonical" href="https://charity-five-rho.vercel.app/events.html" />
+    <meta name="twitter:description" content="Explore planned and regular activity ideas at Friends of Fieldway. Email us to confirm current sessions, dates, locations, and facilitators." />
+    <meta name="twitter:image" content="https://friendsoffieldway.org/assets/fun-day.webp" />
+    <link rel="canonical" href="https://friendsoffieldway.org/events.html" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260501-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -42,14 +43,14 @@
           <a href="./" class="nav__link">Home</a>
           <a href="./about.html" class="nav__link">About Us</a>
           <a href="./programmes.html" class="nav__link">Programmes</a>
-          <a href="./events.html" class="nav__link nav__link--active">Events</a>
+          <a href="./events.html" class="nav__link nav__link--active" aria-current="page">Events</a>
           <a href="./get-involved.html" class="nav__link">Get Involved</a>
           <a href="./contact.html" class="nav__link">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
       </div>
     </header>
@@ -57,27 +58,37 @@
     <main id="main">
 
       <!-- PAGE HERO -->
-      <section class="page-hero reveal">
+      <section class="page-hero page-hero--image page-hero--events reveal" aria-labelledby="events-title">
+        <div class="page-hero__media" aria-hidden="true">
+          <img src="./assets/fun-day.webp" alt="" width="1280" height="842" loading="eager" />
+        </div>
         <div class="container">
-          <h1 class="page-hero__title">Events and activities</h1>
+          <p class="page-hero__eyebrow">What's on</p>
+          <h1 class="page-hero__title" id="events-title">Events and activities</h1>
           <p class="page-hero__subtitle">
-            Discover what is happening at Friends of Fieldway. From weekly sessions to special community gatherings, there is always something to get involved in.
+            Discover the sessions we are shaping with local volunteers and partners. Exact dates, locations, and facilitators are confirmed by email so families and volunteers have the latest details.
           </p>
         </div>
       </section>
 
       <!-- EVENTS LISTING -->
-      <section class="section section--cream" aria-label="Events listing">
+      <section class="section section--cream" aria-labelledby="events-list-title">
         <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">Sessions in development</p>
+            <h2 class="section__title" id="events-list-title">Find the right activity</h2>
+            <p class="section__subtitle">Use the filters to browse by interest, then email us to confirm what is currently running, who is facilitating, and when the next session will happen.</p>
+          </div>
 
           <!-- Filter Pills -->
           <div class="filter-pills" role="group" aria-label="Filter events by category">
-            <button class="filter-pill filter-pill--active" data-category="all">All events</button>
-            <button class="filter-pill" data-category="education">Education</button>
-            <button class="filter-pill" data-category="community">Community</button>
-            <button class="filter-pill" data-category="creative">Creative</button>
-            <button class="filter-pill" data-category="wellbeing">Wellbeing</button>
+            <button class="filter-pill filter-pill--active" data-category="all" aria-pressed="true">All events</button>
+            <button class="filter-pill" data-category="education" aria-pressed="false">Education</button>
+            <button class="filter-pill" data-category="community" aria-pressed="false">Community</button>
+            <button class="filter-pill" data-category="creative" aria-pressed="false">Creative</button>
+            <button class="filter-pill" data-category="wellbeing" aria-pressed="false">Wellbeing</button>
           </div>
+          <p class="filter-status" id="event-filter-status" aria-live="polite">Showing all 8 activities.</p>
 
           <!-- Event Cards -->
           <div class="event-grid">
@@ -85,144 +96,152 @@
             <article class="card card--event reveal" data-category="education">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">14</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--education">Education</span>
               </div>
               <div class="event__body">
-                <h3 class="event__title">Homework club open session</h3>
-                <p class="card__text">Drop in for a free homework support session. Trained volunteers are available to help with maths, English, and science assignments.</p>
+                <h3 class="event__title">Homework support interest session</h3>
+                <p class="card__text">Register interest in a quiet homework club. Support will depend on confirmed volunteers, partner tutors, and the ages or subjects requested.</p>
                 <div class="event__meta">
-                  <span>3:30 pm - 5:30 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>After-school time to be confirmed</span>
+                  <span>Volunteers confirmed before launch</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Homework%20support%20interest%20session">Register interest</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="community">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">16</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--community">Community</span>
               </div>
               <div class="event__body">
                 <h3 class="event__title">Women's group coffee morning</h3>
-                <p class="card__text">A relaxed morning for women in the community to meet, share, and enjoy a friendly cup of tea together. All women welcome.</p>
+                <p class="card__text">A relaxed group for women in the community to meet, share, and enjoy a friendly cup of tea together. Dates will be confirmed once a suitable venue and host are in place.</p>
                 <div class="event__meta">
-                  <span>10:00 am - 12:00 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Morning time to be confirmed</span>
+                  <span>Host confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Women%27s%20group%20coffee%20morning">Ask about attending</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="creative">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">18</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--creative">Creative</span>
               </div>
               <div class="event__body">
-                <h3 class="event__title">Poetry and spoken word evening</h3>
-                <p class="card__text">An open evening of poetry reading, spoken word performance, and creative writing. All levels welcome, whether you want to share or simply listen.</p>
+                <h3 class="event__title">Poetry and spoken word interest evening</h3>
+                <p class="card__text">A creative session idea for reading, writing, and spoken word. We will confirm the format and facilitator before inviting people to attend.</p>
                 <div class="event__meta">
-                  <span>6:30 pm - 8:30 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Evening time to be confirmed</span>
+                  <span>Facilitator confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Poetry%20and%20spoken%20word%20interest%20evening">Register interest</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="wellbeing">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">20</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--wellbeing">Wellbeing</span>
               </div>
               <div class="event__body">
                 <h3 class="event__title">Elderly tea morning and wellness chat</h3>
-                <p class="card__text">A warm and welcoming morning for older residents featuring tea, conversation, and a gentle wellbeing discussion on staying healthy and active.</p>
+                <p class="card__text">A warm social morning for older residents, centred on tea, conversation, and staying connected. Any wellbeing topic will be led by an appropriate guest or partner.</p>
                 <div class="event__meta">
-                  <span>10:30 am - 12:30 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Morning time to be confirmed</span>
+                  <span>Venue confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Elderly%20tea%20morning%20and%20wellness%20chat">Ask about attending</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="education">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">22</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--education">Education</span>
               </div>
               <div class="event__body">
-                <h3 class="event__title">Youth mentoring and goal-setting workshop</h3>
-                <p class="card__text">A focused session for young people to work with mentors on setting personal and academic goals. Includes practical exercises and one-to-one time.</p>
+                <h3 class="event__title">Youth mentoring and goal-setting taster</h3>
+                <p class="card__text">A proposed session for young people to explore goals and next steps with confirmed mentors or partner organisations. We will share details once the right support is in place.</p>
                 <div class="event__meta">
-                  <span>4:00 pm - 6:00 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>After-school time to be confirmed</span>
+                  <span>Mentors confirmed before launch</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Youth%20mentoring%20and%20goal-setting%20taster">Register interest</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="community">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">25</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--community">Community</span>
               </div>
               <div class="event__body">
-                <h3 class="event__title">Men's group: open discussion evening</h3>
-                <p class="card__text">A relaxed evening for men to come together, talk openly, and build connections in a supportive and non-judgemental space.</p>
+                <h3 class="event__title">Men's group: open conversation</h3>
+                <p class="card__text">A proposed conversation group for men to connect in a relaxed setting. The facilitator and format will be confirmed before any session runs.</p>
                 <div class="event__meta">
-                  <span>7:00 pm - 9:00 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Evening time to be confirmed</span>
+                  <span>Facilitator confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Men%27s%20group%20open%20conversation">Register interest</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="creative">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">27</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--creative">Creative</span>
               </div>
               <div class="event__body">
                 <h3 class="event__title">Community art workshop: painting for beginners</h3>
-                <p class="card__text">A hands-on painting workshop for all ages and abilities. All materials provided. Come along and discover your creative side in a friendly environment.</p>
+                <p class="card__text">A hands-on creative workshop idea for all ages and abilities. Materials, venue, and session lead will be confirmed before each workshop.</p>
                 <div class="event__meta">
-                  <span>2:00 pm - 4:00 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Afternoon time to be confirmed</span>
+                  <span>Session lead confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Community%20art%20workshop">Ask about attending</a>
               </div>
             </article>
 
             <article class="card card--event reveal" data-category="wellbeing">
               <div class="event__header">
                 <div class="event__date">
-                  <span class="event__date-day">30</span>
-                  <span class="event__date-month">Apr</span>
+                  <span class="event__date-day">TBC</span>
+                  <span class="event__date-month">Interest</span>
                 </div>
                 <span class="event__category event__category--wellbeing">Wellbeing</span>
               </div>
               <div class="event__body">
                 <h3 class="event__title">Women's wellbeing and self-care session</h3>
-                <p class="card__text">A gentle afternoon focused on self-care, relaxation techniques, and open conversation about women's health and wellbeing.</p>
+                <p class="card__text">A gentle wellbeing session idea focused on connection and self-care. Any specialist wellbeing content will be led by an appropriate facilitator or partner.</p>
                 <div class="event__meta">
-                  <span>1:00 pm - 3:00 pm</span>
-                  <span>Location to be confirmed</span>
+                  <span>Afternoon time to be confirmed</span>
+                  <span>Facilitator confirmed by email</span>
                 </div>
+                <a class="card__link" href="mailto:roy@friendsoffieldway.org?subject=Women%27s%20wellbeing%20and%20self-care%20session">Ask about attending</a>
               </div>
             </article>
 
@@ -251,10 +270,11 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
-            <div class="newsletter" aria-label="Newsletter signup">
-              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
-              <button class="btn btn--sage btn--sm">Subscribe</button>
-            </div>
+            <form class="newsletter" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Programme updates" aria-label="Programme updates signup" novalidate>
+              <label class="sr-only" for="newsletter-email">Email for programme updates</label>
+              <input id="newsletter-email" name="email" type="email" class="form__input" placeholder="Your email address" autocomplete="email" required />
+              <button type="submit" class="btn btn--sage btn--sm">Get updates</button>
+            </form>
           </div>
           <div class="footer__col">
             <strong>Quick Links</strong>
@@ -273,27 +293,18 @@
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
             <p>Fieldway, London</p>
           </div>
-          <div class="footer__col">
-            <strong>Follow Us</strong>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-            </div>
+          <div class="footer__col footer__col--updates">
+            <strong>Updates</strong>
+            <p>Social channels are coming soon. Email us for current programme news.</p>
+            <a href="mailto:roy@friendsoffieldway.org?subject=Programme%20updates">Request updates</a>
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved. <a href="./privacy.html">Privacy</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260508-1"></script>
   </body>
 </html>

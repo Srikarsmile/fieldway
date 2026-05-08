@@ -1,3 +1,8 @@
 .aidesigner/*
 !.aidesigner/.gitkeep
+.claude/
+.mcp.json
 .vercel
+.env
+.env.*
+!.env.example

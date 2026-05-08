@@ -9,21 +9,22 @@
     <meta property="og:description" content="Volunteer, partner with us, or support Friends of Fieldway. There are many ways to get involved and help strengthen your local community." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Friends of Fieldway" />
-    <meta property="og:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Friends of Fieldway logo" />
-    <meta property="og:url" content="https://charity-five-rho.vercel.app/get-involved.html" />
+    <meta property="og:image" content="https://friendsoffieldway.org/assets/art-club.webp" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="1008" />
+    <meta property="og:image:alt" content="Community members painting together at a Friends of Fieldway art club session" />
+    <meta property="og:url" content="https://friendsoffieldway.org/get-involved.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Get Involved | Friends of Fieldway" />
     <meta name="twitter:description" content="Volunteer, partner with us, or support Friends of Fieldway. There are many ways to get involved and help strengthen your local community." />
-    <meta name="twitter:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <link rel="canonical" href="https://charity-five-rho.vercel.app/get-involved.html" />
+    <meta name="twitter:image" content="https://friendsoffieldway.org/assets/art-club.webp" />
+    <link rel="canonical" href="https://friendsoffieldway.org/get-involved.html" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260501-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -43,13 +44,13 @@
           <a href="./about.html" class="nav__link">About Us</a>
           <a href="./programmes.html" class="nav__link">Programmes</a>
           <a href="./events.html" class="nav__link">Events</a>
-          <a href="./get-involved.html" class="nav__link nav__link--active">Get Involved</a>
+          <a href="./get-involved.html" class="nav__link nav__link--active" aria-current="page">Get Involved</a>
           <a href="./contact.html" class="nav__link">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
       </div>
     </header>
@@ -57,9 +58,13 @@
     <main id="main">
 
       <!-- PAGE HERO -->
-      <section class="page-hero reveal">
+      <section class="page-hero page-hero--image page-hero--involved reveal" aria-labelledby="get-involved-title">
+        <div class="page-hero__media" aria-hidden="true">
+          <img src="./assets/art-club.webp" alt="" width="1280" height="1008" loading="eager" />
+        </div>
         <div class="container">
-          <h1 class="page-hero__title">Get involved</h1>
+          <p class="page-hero__eyebrow">Get involved</p>
+          <h1 class="page-hero__title" id="get-involved-title">Get involved</h1>
           <p class="page-hero__subtitle">
             Friends of Fieldway thrives because of the people who support it. Whether you can give your time, share your skills, or partner with us, there is a meaningful way for you to help.
           </p>
@@ -67,8 +72,13 @@
       </section>
 
       <!-- PATHWAYS -->
-      <section class="section section--cream reveal" aria-label="Ways to get involved">
+      <section class="section section--cream reveal" aria-labelledby="ways-title">
         <div class="container">
+          <div class="section__header section__header--center">
+            <p class="section__eyebrow">Ways to help</p>
+            <h2 class="section__title" id="ways-title">Choose how you want to get involved</h2>
+            <p class="section__subtitle">Start with the route that fits your time, skills, or organisation. We can help shape the details together.</p>
+          </div>
           <div class="pathway-grid">
             <article class="card card--pathway reveal">
               <div class="card__icon" style="--accent: var(--sage); --accent-bg: var(--sage-light)">
@@ -190,7 +200,11 @@
           </div>
 
           <div class="form-container--narrow">
-            <form class="form form--two-col" novalidate>
+            <form class="form form--two-col" data-endpoint="/api/contact" data-form-name="Get involved form" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Get involved enquiry" novalidate>
+              <div class="form__group form__group--full form__honeypot" aria-hidden="true">
+                <label class="form__label" for="involve-company">Company</label>
+                <input class="form__input" type="text" id="involve-company" name="company" tabindex="-1" autocomplete="off" />
+              </div>
               <div class="form__group">
                 <label class="form__label" for="involve-name">Full name</label>
                 <input class="form__input" type="text" id="involve-name" name="name" required placeholder="Your full name" />
@@ -223,7 +237,7 @@
                 <button type="submit" class="btn btn--primary btn--lg">Send enquiry</button>
               </div>
               <div class="form__success form__group--full">
-                Thank you for your interest. We have received your enquiry and will be in touch soon.
+                Thank you. Your enquiry has been sent to Friends of Fieldway.
               </div>
             </form>
           </div>
@@ -238,10 +252,11 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
-            <div class="newsletter" aria-label="Newsletter signup">
-              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
-              <button class="btn btn--sage btn--sm">Subscribe</button>
-            </div>
+            <form class="newsletter" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Programme updates" aria-label="Programme updates signup" novalidate>
+              <label class="sr-only" for="newsletter-email">Email for programme updates</label>
+              <input id="newsletter-email" name="email" type="email" class="form__input" placeholder="Your email address" autocomplete="email" required />
+              <button type="submit" class="btn btn--sage btn--sm">Get updates</button>
+            </form>
           </div>
           <div class="footer__col">
             <strong>Quick Links</strong>
@@ -260,27 +275,18 @@
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
             <p>Fieldway, London</p>
           </div>
-          <div class="footer__col">
-            <strong>Follow Us</strong>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-            </div>
+          <div class="footer__col footer__col--updates">
+            <strong>Updates</strong>
+            <p>Social channels are coming soon. Email us for current programme news.</p>
+            <a href="mailto:roy@friendsoffieldway.org?subject=Programme%20updates">Request updates</a>
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved. <a href="./privacy.html">Privacy</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260508-1"></script>
   </body>
 </html>

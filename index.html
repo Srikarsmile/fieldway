@@ -4,37 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends of Fieldway | A Place for Community, Learning, and Wellbeing</title>
-    <meta name="description" content="Friends of Fieldway is a community hub offering educational support, mentoring, wellbeing sessions, social activities, and creative programmes for local residents of all ages." />
+    <meta name="description" content="Friends of Fieldway is a community-led initiative building local support, social connection, wellbeing activities, creative opportunities, and learning spaces for Fieldway residents." />
     <meta name="keywords" content="community hub, educational support, homework club, youth activities, women's support group, men's community group, elderly social activities, community wellbeing programmes, creative arts community centre" />
     <meta property="og:title" content="Friends of Fieldway | A Place for Community, Learning, and Wellbeing" />
-    <meta property="og:description" content="Friends of Fieldway is a community hub offering educational support, mentoring, wellbeing sessions, social activities, and creative programmes for local residents of all ages." />
+    <meta property="og:description" content="Friends of Fieldway is a community-led initiative building local support, social connection, wellbeing activities, creative opportunities, and learning spaces for Fieldway residents." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Friends of Fieldway" />
-    <meta property="og:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Friends of Fieldway logo" />
-    <meta property="og:url" content="https://charity-five-rho.vercel.app/" />
+    <meta property="og:image" content="https://friendsoffieldway.org/assets/hero-community.jpg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1067" />
+    <meta property="og:image:alt" content="Neighbours of all ages gathered at a Fieldway community event" />
+    <meta property="og:url" content="https://friendsoffieldway.org/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Friends of Fieldway | A Place for Community, Learning, and Wellbeing" />
-    <meta name="twitter:description" content="Friends of Fieldway is a community hub offering educational support, mentoring, wellbeing sessions, social activities, and creative programmes for local residents of all ages." />
-    <meta name="twitter:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <link rel="canonical" href="https://charity-five-rho.vercel.app/" />
+    <meta name="twitter:description" content="Friends of Fieldway is a community-led initiative building local support, social connection, wellbeing activities, creative opportunities, and learning spaces for Fieldway residents." />
+    <meta name="twitter:image" content="https://friendsoffieldway.org/assets/hero-community.jpg" />
+    <link rel="canonical" href="https://friendsoffieldway.org/" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Friends of Fieldway",
-      "description": "A community charity creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, wellbeing activities, creative opportunities, and meaningful community engagement.",
-      "url": "https://charity-five-rho.vercel.app"
+      "description": "A community-led initiative creating a safe, inclusive, and enriching community hub where local residents of all ages can access support, social connection, wellbeing activities, creative opportunities, and meaningful community engagement.",
+      "url": "https://friendsoffieldway.org",
+      "logo": "https://friendsoffieldway.org/assets/logo.png",
+      "image": "https://friendsoffieldway.org/assets/hero-community.jpg",
+      "email": "roy@friendsoffieldway.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fieldway",
+        "addressRegion": "London",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Fieldway, London"
+      }
     }
     </script>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="preload" as="image" href="./assets/hero-community.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260501-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -50,7 +64,7 @@
           </span>
         </a>
         <nav class="nav" id="main-nav" aria-label="Primary">
-          <a href="./" class="nav__link nav__link--active">Home</a>
+          <a href="./" class="nav__link nav__link--active" aria-current="page">Home</a>
           <a href="./about.html" class="nav__link">About Us</a>
           <a href="./programmes.html" class="nav__link">Programmes</a>
           <a href="./events.html" class="nav__link">Events</a>
@@ -58,9 +72,9 @@
           <a href="./contact.html" class="nav__link">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
       </div>
     </header>
@@ -69,10 +83,10 @@
     <main id="main">
 
       <!-- 1. HERO -->
-      <section class="hero reveal" aria-label="Hero">
+      <section class="hero reveal" aria-labelledby="home-title">
         <div class="container">
           <p class="hero__eyebrow">Fieldway Community</p>
-          <h1 class="hero__title">Bringing Fieldway together</h1>
+          <h1 class="hero__title" id="home-title">Bringing Fieldway together</h1>
           <p class="hero__subtitle">
             Events, support, and opportunities for local families, neighbours, and young people in Fieldway.
           </p>
@@ -107,7 +121,7 @@
             </p>
           </div>
           <div class="decor-band" aria-hidden="true">
-            <span class="decor-band__line"></span>
+            <span class="decor-band__line">&nbsp;</span>
             <span class="decor-band__dot decor-band__dot--plum">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </span>
@@ -123,7 +137,7 @@
             <span class="decor-band__dot decor-band__dot--peach">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v-2a4 4 0 0 1 8 0v2"/><path d="M6 13h12l-1 7H7z"/><path d="M12 3v3"/></svg>
             </span>
-            <span class="decor-band__line"></span>
+            <span class="decor-band__line">&nbsp;</span>
           </div>
         </div>
       </section>
@@ -143,7 +157,7 @@
                   <circle cx="24" cy="24" r="5"/>
                 </svg>
               </div>
-              <h4>Seen</h4>
+              <h3>Seen</h3>
               <p>Known by name, noticed when you walk through the door.</p>
             </div>
             <div class="value-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
@@ -155,7 +169,7 @@
                   <path d="M22 38v-2c0-5 4-8 10-8s10 3 10 8v2"/>
                 </svg>
               </div>
-              <h4>Included</h4>
+              <h3>Included</h3>
               <p>Whoever you are, wherever you're from, you're welcome here.</p>
             </div>
             <div class="value-card reveal" style="--accent: var(--lavender); --accent-bg: var(--lavender-light)">
@@ -164,7 +178,7 @@
                   <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
                 </svg>
               </div>
-              <h4>Part of something</h4>
+              <h3>Part of something</h3>
               <p>Whether you've lived here for years or just arrived, this is for you.</p>
             </div>
           </div>
@@ -183,23 +197,23 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-item gallery-item--tall reveal">
-              <img src="./assets/day-out-trips.webp" alt="Children playing together on a community day out trip" loading="lazy" decoding="async" />
+              <img src="./assets/day-out-trips.webp" alt="Children playing together on a community day out trip" width="852" height="1280" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Day out trips</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/allotments.webp" alt="Fieldway residents and volunteers at the allotments with freshly grown vegetables" loading="lazy" decoding="async" />
+              <img src="./assets/allotments.webp" alt="Fieldway residents and volunteers at the allotments with freshly grown vegetables" width="1280" height="855" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Allotments</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/games.webp" alt="Neighbours of different ages playing board games together" loading="lazy" decoding="async" />
+              <img src="./assets/games.webp" alt="Neighbours of different ages playing board games together" width="1280" height="832" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Games</figcaption>
             </figure>
             <figure class="gallery-item reveal">
-              <img src="./assets/art-club.webp" alt="Community members painting together at an art club session" loading="lazy" decoding="async" />
+              <img src="./assets/art-club.webp" alt="Community members painting together at an art club session" width="1280" height="1008" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Art club</figcaption>
             </figure>
             <figure class="gallery-item gallery-item--wide reveal">
-              <img src="./assets/fun-day.webp" alt="Families and neighbours gathered together at a Fieldway community fun day" loading="lazy" decoding="async" />
+              <img src="./assets/fun-day.webp" alt="Families and neighbours gathered together at a Fieldway community fun day" width="1280" height="842" loading="lazy" decoding="async" />
               <figcaption class="gallery-item__caption">Fun Day</figcaption>
             </figure>
           </div>
@@ -353,14 +367,14 @@
             <div class="partner-card reveal" style="--accent: var(--plum); --accent-bg: var(--plum-light)">
               <span class="partner-card__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 22V10l6-7 6 7v12"/>
-                  <path d="M10 22v-6h4v6"/>
-                  <path d="M12 3v7"/>
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+                  <path d="M8 17h8"/>
                 </svg>
               </span>
               <div class="partner-card__body">
-                <span class="partner-card__title">Churches</span>
-                <span class="partner-card__text">Shared values and welcoming spaces with faith communities.</span>
+                <span class="partner-card__title">Faith communities</span>
+                <span class="partner-card__text">Shared values, welcoming spaces, and local support across faith groups.</span>
               </div>
             </div>
             <div class="partner-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
@@ -421,10 +435,11 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
-            <div class="newsletter" aria-label="Newsletter signup">
-              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
-              <button class="btn btn--sage btn--sm">Subscribe</button>
-            </div>
+            <form class="newsletter" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Programme updates" aria-label="Programme updates signup" novalidate>
+              <label class="sr-only" for="newsletter-email">Email for programme updates</label>
+              <input id="newsletter-email" name="email" type="email" class="form__input" placeholder="Your email address" autocomplete="email" required />
+              <button type="submit" class="btn btn--sage btn--sm">Get updates</button>
+            </form>
           </div>
           <div class="footer__col">
             <strong>Quick Links</strong>
@@ -443,27 +458,18 @@
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
             <p>Fieldway, London</p>
           </div>
-          <div class="footer__col">
-            <strong>Follow Us</strong>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-            </div>
+          <div class="footer__col footer__col--updates">
+            <strong>Updates</strong>
+            <p>Social channels are coming soon. Email us for current programme news.</p>
+            <a href="mailto:roy@friendsoffieldway.org?subject=Programme%20updates">Request updates</a>
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved. <a href="./privacy.html">Privacy</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260508-1"></script>
   </body>
 </html>

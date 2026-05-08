@@ -9,21 +9,22 @@
     <meta property="og:description" content="Learn about Friends of Fieldway, our story, our vision, and our commitment to creating an inclusive community hub for education, wellbeing, and connection." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Friends of Fieldway" />
-    <meta property="og:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Friends of Fieldway logo" />
-    <meta property="og:url" content="https://charity-five-rho.vercel.app/about.html" />
+    <meta property="og:image" content="https://friendsoffieldway.org/assets/learning-space.webp" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1600" />
+    <meta property="og:image:alt" content="Young people learning together in a bright community space" />
+    <meta property="og:url" content="https://friendsoffieldway.org/about.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About Us | Friends of Fieldway" />
     <meta name="twitter:description" content="Learn about Friends of Fieldway, our story, our vision, and our commitment to creating an inclusive community hub for education, wellbeing, and connection." />
-    <meta name="twitter:image" content="https://charity-five-rho.vercel.app/assets/share-logo-card.png" />
-    <link rel="canonical" href="https://charity-five-rho.vercel.app/about.html" />
+    <meta name="twitter:image" content="https://friendsoffieldway.org/assets/learning-space.webp" />
+    <link rel="canonical" href="https://friendsoffieldway.org/about.html" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260501-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -40,16 +41,16 @@
         </a>
         <nav class="nav" id="main-nav" aria-label="Primary">
           <a href="./" class="nav__link">Home</a>
-          <a href="./about.html" class="nav__link nav__link--active">About Us</a>
+          <a href="./about.html" class="nav__link nav__link--active" aria-current="page">About Us</a>
           <a href="./programmes.html" class="nav__link">Programmes</a>
           <a href="./events.html" class="nav__link">Events</a>
           <a href="./get-involved.html" class="nav__link">Get Involved</a>
           <a href="./contact.html" class="nav__link">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
+          <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
       </div>
     </header>
@@ -57,11 +58,15 @@
     <main id="main">
 
       <!-- PAGE HERO -->
-      <section class="page-hero reveal">
+      <section class="page-hero page-hero--image page-hero--about reveal" aria-labelledby="about-title">
+        <div class="page-hero__media" aria-hidden="true">
+          <img src="./assets/learning-space.webp" alt="" width="1600" height="1600" loading="eager" />
+        </div>
         <div class="container">
-          <h1 class="page-hero__title">About us</h1>
+          <p class="page-hero__eyebrow">Our story</p>
+          <h1 class="page-hero__title" id="about-title">About us</h1>
           <p class="page-hero__subtitle">
-            Friends of Fieldway is a community-led charity creating a safe, welcoming space where local residents of all ages can learn, connect, grow, and belong.
+            Friends of Fieldway is a community-led initiative creating a safe, welcoming space where local residents of all ages can learn, connect, grow, and belong.
           </p>
         </div>
       </section>
@@ -84,7 +89,7 @@
               </p>
             </div>
             <div class="about-story__media">
-              <img src="./assets/learning-space.png" alt="Young people learning together in a bright community space" width="1024" height="1024" loading="lazy" />
+              <img src="./assets/learning-space.webp" alt="Young people learning together in a bright community space" width="1024" height="1024" loading="lazy" />
             </div>
           </div>
         </div>
@@ -95,7 +100,7 @@
         <div class="container">
           <div class="vision-card">
             <p class="section__eyebrow">Our vision</p>
-            <h3>A safe, vibrant, and supportive community space where people learn, connect, grow, and belong</h3>
+            <h2>A safe, vibrant, and supportive community space where people learn, connect, grow, and belong</h2>
             <p>
               Our mission is to create an inclusive and enriching community hub where local residents of all ages can access educational support, social connection, wellbeing activities, creative opportunities, and meaningful community engagement.
             </p>
@@ -117,7 +122,7 @@
                   <path d="M24 6C14 6 8 14 8 22c0 6 4 10 8 14l8 8 8-8c4-4 8-8 8-14 0-8-6-16-16-16z"/>
                 </svg>
               </div>
-              <h4>Caring</h4>
+              <h3>Caring</h3>
               <p>Everything we do is rooted in genuine care for the people in our community and their wellbeing.</p>
             </div>
             <div class="value-card reveal">
@@ -131,7 +136,7 @@
                   <path d="M24 28c2 0 4 2 4 4"/>
                 </svg>
               </div>
-              <h4>Inclusive</h4>
+              <h3>Inclusive</h3>
               <p>We welcome everyone regardless of age, background, or circumstance. Our space belongs to all.</p>
             </div>
             <div class="value-card reveal">
@@ -142,7 +147,7 @@
                   <path d="M8 40h32"/>
                 </svg>
               </div>
-              <h4>Reliable</h4>
+              <h3>Reliable</h3>
               <p>Our community can count on us to be consistent, trustworthy, and always there when needed.</p>
             </div>
             <div class="value-card reveal">
@@ -154,10 +159,40 @@
                   <circle cx="24" cy="36" r="4"/>
                 </svg>
               </div>
-              <h4>Hopeful</h4>
+              <h3>Hopeful</h3>
               <p>We believe in the potential of every person and the power of community to create positive change.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section class="section section--white reveal" aria-label="Our impact">
+        <div class="container">
+          <div class="section__header section__header--center">
+            <p class="section__eyebrow">Our impact</p>
+            <h2 class="section__title">The difference we make in Fieldway</h2>
+            <p class="section__subtitle">
+              Real numbers behind real change in our community.
+            </p>
+          </div>
+          <div class="stats-strip">
+            <div class="stat">
+              <span class="stat__number" data-target="120" data-suffix="+">120+</span>
+              <span class="stat__label">Community members reached through activities and events</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-target="8">8</span>
+              <span class="stat__label">Regular weekly programmes for all ages</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-target="5" data-suffix=" yrs">5 yrs</span>
+              <span class="stat__label">Serving the Fieldway community</span>
+            </div>
+          </div>
+          <p class="impact__accountability">
+            Friends of Fieldway is supported by community donations and partner grants. We are committed to transparent reporting on how funds are used and the difference they make.
+          </p>
         </div>
       </section>
 
@@ -168,11 +203,11 @@
             <p class="section__eyebrow">Our founder</p>
             <h2 class="section__title">The person behind the vision</h2>
           </div>
-          <div class="vision-card" style="text-align: left; max-width: 720px;">
-            <h3 style="margin-bottom: var(--space-sm);">Roy Simpson</h3>
-            <p style="font-size: var(--text-small); color: var(--lavender); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-md);">Founder, Friends of Fieldway</p>
+          <div class="vision-card founder-card">
+            <h3 class="founder-card__name">Roy Simpson</h3>
+            <p class="founder-card__role">Founder, Friends of Fieldway</p>
             <p>
-              Roy Simpson founded Friends of Fieldway with a clear purpose: to create a community hub where local residents of all ages can access the support, connection, and opportunity they deserve. Drawing on a deep understanding of the community's needs, Roy has led the development of the organisation's vision, programmes, and partnerships from the very beginning.
+              Roy Simpson founded Friends of Fieldway with a clear purpose: to create a community hub where local residents of all ages can access the support, connection, and opportunity they deserve. Drawing on a deep understanding of the community's needs, Roy has led the development of the initiative's vision, programmes, and partnerships from the very beginning.
             </p>
           </div>
         </div>
@@ -200,10 +235,11 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
-            <div class="newsletter" aria-label="Newsletter signup">
-              <input type="email" class="form__input" placeholder="Your email address" aria-label="Email for newsletter" />
-              <button class="btn btn--sage btn--sm">Subscribe</button>
-            </div>
+            <form class="newsletter" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Programme updates" aria-label="Programme updates signup" novalidate>
+              <label class="sr-only" for="newsletter-email">Email for programme updates</label>
+              <input id="newsletter-email" name="email" type="email" class="form__input" placeholder="Your email address" autocomplete="email" required />
+              <button type="submit" class="btn btn--sage btn--sm">Get updates</button>
+            </form>
           </div>
           <div class="footer__col">
             <strong>Quick Links</strong>
@@ -222,27 +258,18 @@
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
             <p>Fieldway, London</p>
           </div>
-          <div class="footer__col">
-            <strong>Follow Us</strong>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-            </div>
+          <div class="footer__col footer__col--updates">
+            <strong>Updates</strong>
+            <p>Social channels are coming soon. Email us for current programme news.</p>
+            <a href="mailto:roy@friendsoffieldway.org?subject=Programme%20updates">Request updates</a>
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 Friends of Fieldway. All rights reserved.</p>
+          <p>&copy; 2026 Friends of Fieldway. All rights reserved. <a href="./privacy.html">Privacy</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260508-1"></script>
   </body>
 </html>
