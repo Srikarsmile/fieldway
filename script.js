@@ -51,6 +51,55 @@
     });
   }
 
+  // ---- Fade content in as it scrolls into view ----
+  const revealItems = Array.from(document.querySelectorAll(".reveal")).filter((el) => el.tagName !== "SECTION");
+  const showItem = (el) => el.classList.add("is-visible");
+
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    revealItems.forEach(showItem);
+  } else {
+    // Stagger siblings (e.g. cards in a grid) so they arrive one after another.
+    revealItems.forEach((el) => {
+      const siblings = Array.from(el.parentElement.children).filter((child) => child.classList.contains("reveal"));
+      const index = siblings.indexOf(el);
+      if (index > 0) el.style.setProperty("--delay", `${Math.min(index, 5) * 70}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          showItem(entry.target);
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.1 }
+    );
+
+    revealItems.forEach((el) => revealObserver.observe(el));
+  }
+
+  // Anchor targets appear straight away rather than waiting to fade in.
+  const revealWithin = (target) => {
+    if (target.classList.contains("reveal")) showItem(target);
+    target.querySelectorAll(".reveal").forEach(showItem);
+  };
+
+  const revealHashTarget = () => {
+    if (!window.location.hash) return;
+    try {
+      const hashTarget = document.querySelector(window.location.hash);
+      if (hashTarget) revealWithin(hashTarget);
+    } catch {
+      // Ignore hashes that are not valid selectors.
+    }
+  };
+
+  revealHashTarget();
+  window.addEventListener("hashchange", revealHashTarget);
+
+  window.addEventListener("beforeprint", () => revealItems.forEach(showItem));
+
   // ---- Stat number counter ----
   const animateNumber = (node) => {
     const target = Number(node.dataset.target);
@@ -153,6 +202,7 @@
       }
       if (!target) return;
       e.preventDefault();
+      revealWithin(target);
       const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
       focusTarget(target);
       history.pushState(null, "", href);

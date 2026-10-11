@@ -75,6 +75,24 @@
   --container-padding: 1.5rem;
 }
 
+/* ---------- Card Hover ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover,
+  .value-card:hover,
+  .partner-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .section--green .card--involvement:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .gallery-item:hover { box-shadow: var(--shadow-hover); }
+  .gallery-item:hover img { transform: scale(1.04); }
+}
+
 /* ---------- Page Transitions ---------- */
 /* Navigation opt-in is in each page head so streamed responses enable it early. */
 
@@ -2090,25 +2108,23 @@ p { color: var(--grey); }
 }
 
 /* ---------- Reveal Animations ---------- */
-.reveal {
-  opacity: 1;
-  transform: none;
-  transition: opacity 180ms ease-out;
-  transition-delay: var(--delay, 0ms);
-}
-
-.js .reveal {
-  opacity: 1;
-  transform: none;
-}
-
-.js .reveal--left,
-.js .reveal--right,
-.js .reveal--zoom { transform: none; }
+/* Content fades up as it scrolls into view. script.js adds .is-visible;
+   whole sections are left alone so their backgrounds never fade. The
+   animation does not fill forwards, so hover transforms still apply. */
+.js .reveal:not(section) { opacity: 0; }
 
 .js .reveal.is-visible {
   opacity: 1;
-  transform: translate(0, 0) scale(1);
+  animation: reveal-up 600ms var(--ease-out) var(--delay, 0ms) backwards;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media print {
+  .js .reveal:not(section) { opacity: 1; }
 }
 
 /* ---------- CTA Section ---------- */
@@ -3281,7 +3297,9 @@ p { color: var(--grey); }
     scroll-behavior: auto !important;
   }
 
-  .js .reveal { opacity: 1; transform: none; }
+  .js .reveal:not(section) { opacity: 1; animation: none; }
+  .card:hover, .value-card:hover, .partner-card:hover,
+  .gallery-item:hover img { transform: none; }
   .btn, .header-contact-cta, .programme-jump__link, .event__action,
   .filter-pill, .back-to-top.is-visible { transform: none !important; }
 }
