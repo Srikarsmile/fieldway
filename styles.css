@@ -1302,13 +1302,14 @@ p { color: var(--grey); }
 @media (max-width: 1024px) {
   .hero > .container { display: flex; flex-direction: column; }
   .hero__content { display: contents; }
+  /* Practical launch details come straight after the headline. */
   .hero .hero__eyebrow { order: 1; }
   .hero .hero__title { order: 2; }
-  .hero .hero__subtitle { order: 3; }
-  .hero__media { order: 4; width: 100%; max-width: 720px; margin-bottom: var(--space-md); }
+  .launch-announcement { order: 3; width: 100%; }
+  .hero .hero__subtitle { order: 4; }
+  .hero .hero__actions { order: 5; margin-bottom: var(--space-lg); }
+  .hero__media { order: 6; width: 100%; max-width: 720px; }
   .hero__media img { aspect-ratio: 16 / 9; object-fit: cover; }
-  .launch-announcement { order: 5; width: 100%; }
-  .hero .hero__actions { order: 6; margin-bottom: 0; }
 }
 
 /* ---------- Inner Page Hero ---------- */
