@@ -22,10 +22,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-20260508.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="./assets/favicon-20260508.png" />
+    <link rel="preload" as="image" href="./assets/hero-community.webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20261011-4" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -34,32 +35,37 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="./" aria-label="Friends of Fieldway home">
-          <img class="brand__logo" src="./assets/logo-mark.png" alt="Friends of Fieldway logo" width="44" height="44" />
+        <a class="brand" href="./">
+          <img class="brand__logo" src="./assets/logo-mark.png" alt="" width="44" height="44" />
           <span class="brand__text">
-            <span class="brand__pre">Friends of</span><strong class="brand__main">Fieldway</strong>
+            <span class="brand__pre">Friends of </span><strong class="brand__main">Fieldway</strong>
           </span>
         </a>
-        <nav class="nav" id="main-nav" aria-label="Primary">
-          <a href="./" class="nav__link">Home</a>
-          <a href="./about.html" class="nav__link">About Us</a>
-          <a href="./programmes.html" class="nav__link">Programmes</a>
-          <a href="./events.html" class="nav__link">Events</a>
-          <a href="./get-involved.html" class="nav__link">Get Involved</a>
-          <a href="./contact.html" class="nav__link nav__link--active" aria-current="page">Contact</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
+        <nav class="nav" id="main-nav" aria-label="Primary">
+          <a href="./" class="nav__link">Home</a>
+          <a href="./about.html" class="nav__link">About Us</a>
+          <a href="./programmes.html" class="nav__link">What&rsquo;s Planned</a>
+          <a href="./events.html" class="nav__link">Launch</a>
+          <a href="./get-involved.html" class="nav__link">Get Involved</a>
+          <a href="./contact.html" class="nav__link nav__link--cta nav__link--active" aria-current="page">Get in touch</a>
+        </nav>
+        <a class="header-contact-cta" href="./contact.html" aria-current="page">
+          <span>Get in touch</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+
       </div>
     </header>
 
     <main id="main">
 
       <!-- PAGE HERO -->
-      <section class="page-hero page-hero--image page-hero--contact reveal" aria-labelledby="contact-title">
+      <section class="page-hero page-hero--image page-hero--contact" aria-labelledby="contact-title">
         <div class="page-hero__media" aria-hidden="true">
           <img src="./assets/hero-community.webp" alt="" width="1600" height="1067" loading="eager" decoding="async" fetchpriority="high" />
         </div>
@@ -77,53 +83,8 @@
         <div class="container">
           <div class="contact-grid">
 
-            <!-- Form -->
-            <div class="reveal">
-              <h2>Send us a message</h2>
-              <form class="form" data-endpoint="/api/contact" data-form-name="Contact form" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Website enquiry" novalidate>
-                <div class="form__group form__honeypot" aria-hidden="true">
-                  <label class="form__label" for="contact-company">Company</label>
-                  <input class="form__input" type="text" id="contact-company" name="company" tabindex="-1" autocomplete="off" />
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="contact-name">Full name</label>
-                  <input class="form__input" type="text" id="contact-name" name="name" required placeholder="Your full name" />
-                  <span class="form__error">Please enter your name.</span>
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="contact-email">Email address</label>
-                  <input class="form__input" type="email" id="contact-email" name="email" required placeholder="you@example.com" />
-                  <span class="form__error">Please enter a valid email address.</span>
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="contact-subject">Subject</label>
-                  <select class="form__select" id="contact-subject" name="subject" required>
-                    <option value="" disabled selected>What is this about?</option>
-                    <option value="programmes">Programmes and activities</option>
-                    <option value="volunteering">Volunteering</option>
-                    <option value="partnership">Partnership or collaboration</option>
-                    <option value="support">Supporting our work</option>
-                    <option value="referral">Making a referral</option>
-                    <option value="general">General enquiry</option>
-                  </select>
-                  <span class="form__error">Please select a subject.</span>
-                </div>
-                <div class="form__group">
-                  <label class="form__label" for="contact-message">Your message</label>
-                  <textarea class="form__textarea" id="contact-message" name="message" required placeholder="How can we help?"></textarea>
-                  <span class="form__error">Please enter a message.</span>
-                </div>
-                <div class="form__group">
-                  <button type="submit" class="btn btn--primary btn--lg">Send message</button>
-                </div>
-                <div class="form__success">
-                  Thank you. Your message has been sent to Friends of Fieldway.
-                </div>
-              </form>
-            </div>
-
             <!-- Contact Details -->
-            <div class="reveal">
+            <div class="reveal contact-info-panel">
               <div class="contact-details">
                 <h2>Get in touch</h2>
                 <p>Please use email contact for now. We aim to respond to all enquiries within two working days.</p>
@@ -150,12 +111,62 @@
                   </div>
                   <div>
                     <strong>Area</strong>
-                    <p>Fieldway, London</p>
+                    <p>Fieldway, Croydon</p>
+                    <p><strong>Launch venue</strong>The Family Centre<br />New Addington, Croydon, CR0 9AZ</p>
+                    <p>Thursday 5 November 2026, 2:00&ndash;4:00 pm</p>
                   </div>
                 </div>
 
               </div>
             </div>
+
+
+            <!-- Form -->
+            <div class="reveal contact-form-panel" id="contact-form">
+              <h2>Send us a message</h2>
+              <form class="form" data-endpoint="/api/contact" data-form-name="Contact form" data-mailto="roy@friendsoffieldway.org" data-subject-prefix="Website enquiry" novalidate>
+                <div class="form__group form__honeypot" aria-hidden="true">
+                  <label class="form__label" for="contact-company">Company</label>
+                  <input class="form__input" type="text" id="contact-company" name="company" tabindex="-1" autocomplete="off" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="contact-name">Full name</label>
+                  <input class="form__input" type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Your full name" />
+                  <span class="form__error">Please enter your name.</span>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="contact-email">Email address</label>
+                  <input class="form__input" type="email" id="contact-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+                  <span class="form__error">Please enter a valid email address.</span>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="contact-subject">Subject</label>
+                  <select class="form__select" id="contact-subject" name="subject" required>
+                    <option value="" disabled selected>What is this about?</option>
+                    <option value="launch">Coming to the launch</option>
+                    <option value="programmes">Programmes and activities</option>
+                    <option value="volunteering">Volunteering</option>
+                    <option value="partnership">Partnership or collaboration</option>
+                    <option value="support">Supporting our work</option>
+                    <option value="referral">Making a referral</option>
+                    <option value="general">General enquiry</option>
+                  </select>
+                  <span class="form__error">Please select a subject.</span>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="contact-message">Your message</label>
+                  <textarea class="form__textarea" id="contact-message" name="message" required placeholder="How can we help?"></textarea>
+                  <span class="form__error">Please enter a message.</span>
+                </div>
+                <div class="form__group">
+                  <button type="submit" class="btn btn--primary btn--lg">Send message</button>
+                </div>
+                <div class="form__success">
+                  Thank you. Your message has been sent to Friends of Fieldway.
+                </div>
+              </form>
+            </div>
+
 
           </div>
         </div>
@@ -168,24 +179,28 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
+            <a class="footer__logo-link" href="./" aria-label="Friends of Fieldway home">
+              <img class="footer__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="194" height="240" loading="lazy" decoding="async" />
+            </a>
+            <p>A community-led group for residents of all ages in Fieldway, Croydon &mdash; building support, connection, and creative opportunities together.</p>
           </div>
           <div class="footer__col">
-            <strong>Quick Links</strong>
-            <a href="./">Home</a>
+            <strong>Explore</strong>
             <a href="./about.html">About Us</a>
-            <a href="./programmes.html">Programmes</a>
-            <a href="./events.html">Events</a>
+            <a href="./programmes.html">What&rsquo;s Planned</a>
+            <a href="./events.html">Launch</a>
             <a href="./get-involved.html">Get Involved</a>
             <a href="./contact.html">Contact</a>
           </div>
-          <a class="footer__logo-link" href="./" aria-label="Friends of Fieldway home">
-            <img class="footer__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="194" height="240" loading="lazy" decoding="async" />
-          </a>
           <div class="footer__col">
             <strong>Contact</strong>
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
-            <p>Fieldway, London</p>
+            <p>Fieldway, Croydon</p>
+          </div>
+          <div class="footer__col">
+            <strong>Our launch</strong>
+            <p>Thursday 5 November 2026<br />2:00&ndash;4:00 pm<br />The Family Centre, CR0 9AZ</p>
+            <a href="./events.html">Launch details</a>
           </div>
         </div>
         <div class="footer__bottom">
@@ -194,6 +209,12 @@
       </div>
     </footer>
 
-    <script src="./script.js?v=20260508-1"></script>
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5" />
+        <path d="m6 11 6-6 6 6" />
+      </svg>
+    </button>
+    <script src="./script.js?v=20261011-3"></script>
   </body>
 </html>

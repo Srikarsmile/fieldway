@@ -25,8 +25,8 @@
     <link rel="apple-touch-icon" href="./assets/favicon-20260508.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Fraunces:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260508-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20261011-4" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -35,32 +35,37 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="./" aria-label="Friends of Fieldway home">
-          <img class="brand__logo" src="./assets/logo-mark.png" alt="Friends of Fieldway logo" width="44" height="44" />
+        <a class="brand" href="./">
+          <img class="brand__logo" src="./assets/logo-mark.png" alt="" width="44" height="44" />
           <span class="brand__text">
-            <span class="brand__pre">Friends of</span><strong class="brand__main">Fieldway</strong>
+            <span class="brand__pre">Friends of </span><strong class="brand__main">Fieldway</strong>
           </span>
         </a>
-        <nav class="nav" id="main-nav" aria-label="Primary">
-          <a href="./" class="nav__link">Home</a>
-          <a href="./about.html" class="nav__link">About Us</a>
-          <a href="./programmes.html" class="nav__link">Programmes</a>
-          <a href="./events.html" class="nav__link">Events</a>
-          <a href="./get-involved.html" class="nav__link">Get Involved</a>
-          <a href="./contact.html" class="nav__link">Contact</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
           <span class="nav-toggle-bar" aria-hidden="true">&nbsp;</span>
         </button>
+        <nav class="nav" id="main-nav" aria-label="Primary">
+          <a href="./" class="nav__link">Home</a>
+          <a href="./about.html" class="nav__link">About Us</a>
+          <a href="./programmes.html" class="nav__link">What&rsquo;s Planned</a>
+          <a href="./events.html" class="nav__link">Launch</a>
+          <a href="./get-involved.html" class="nav__link">Get Involved</a>
+          <a href="./contact.html" class="nav__link nav__link--cta">Get in touch</a>
+        </nav>
+        <a class="header-contact-cta" href="./contact.html">
+          <span>Get in touch</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+
       </div>
     </header>
 
     <main id="main">
 
       <!-- PAGE HERO -->
-      <section class="page-hero reveal" aria-labelledby="privacy-title">
+      <section class="page-hero" aria-labelledby="privacy-title">
         <div class="container">
           <h1 class="page-hero__title" id="privacy-title">Privacy policy</h1>
           <p class="page-hero__subtitle">
@@ -78,7 +83,7 @@
 
             <h2>Who we are</h2>
             <p>
-              Friends of Fieldway is a community-led initiative based in Fieldway, London.
+              Friends of Fieldway is a community-led initiative based in Fieldway, Croydon.
               For any questions about this policy or how we handle your information, contact our data-protection lead at
               <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>.
             </p>
@@ -150,24 +155,28 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <p>Creating a safe, inclusive, and enriching community hub where local residents of all ages can access educational support, social connection, and creative opportunities.</p>
+            <a class="footer__logo-link" href="./" aria-label="Friends of Fieldway home">
+              <img class="footer__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="194" height="240" loading="lazy" decoding="async" />
+            </a>
+            <p>A community-led group for residents of all ages in Fieldway, Croydon &mdash; building support, connection, and creative opportunities together.</p>
           </div>
           <div class="footer__col">
-            <strong>Quick Links</strong>
-            <a href="./">Home</a>
+            <strong>Explore</strong>
             <a href="./about.html">About Us</a>
-            <a href="./programmes.html">Programmes</a>
-            <a href="./events.html">Events</a>
+            <a href="./programmes.html">What&rsquo;s Planned</a>
+            <a href="./events.html">Launch</a>
             <a href="./get-involved.html">Get Involved</a>
             <a href="./contact.html">Contact</a>
           </div>
-          <a class="footer__logo-link" href="./" aria-label="Friends of Fieldway home">
-            <img class="footer__logo" src="./assets/logo.png" alt="Friends of Fieldway logo" width="194" height="240" loading="lazy" decoding="async" />
-          </a>
           <div class="footer__col">
             <strong>Contact</strong>
             <a href="mailto:roy@friendsoffieldway.org">roy@friendsoffieldway.org</a>
-            <p>Fieldway, London</p>
+            <p>Fieldway, Croydon</p>
+          </div>
+          <div class="footer__col">
+            <strong>Our launch</strong>
+            <p>Thursday 5 November 2026<br />2:00&ndash;4:00 pm<br />The Family Centre, CR0 9AZ</p>
+            <a href="./events.html">Launch details</a>
           </div>
         </div>
         <div class="footer__bottom">
@@ -176,6 +185,12 @@
       </div>
     </footer>
 
-    <script src="./script.js?v=20260508-1"></script>
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5" />
+        <path d="m6 11 6-6 6 6" />
+      </svg>
+    </button>
+    <script src="./script.js?v=20261011-3"></script>
   </body>
 </html>

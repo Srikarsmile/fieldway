@@ -2,5 +2,7 @@
 .vercel
 .aidesigner
 .claude
+.codegraph
 .mcp.json
 .DS_Store
+tests

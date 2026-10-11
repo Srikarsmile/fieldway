@@ -2,54 +2,53 @@
   "use strict";
 
   document.documentElement.classList.add("js");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const scrollBehavior = (event) => reducedMotion.matches || event.detail === 0 ? "instant" : "smooth";
+
+  const focusTarget = (target) => {
+    if (!target.hasAttribute("tabindex")) {
+      target.setAttribute("tabindex", "-1");
+      target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+    }
+    target.focus({ preventScroll: true });
+  };
 
   // ---- Scroll progress bar ----
   const progressBar = document.querySelector(".scroll-progress");
+  const backToTop = document.querySelector(".back-to-top");
   let scrollable = document.documentElement.scrollHeight - window.innerHeight;
 
   const updateProgress = () => {
     if (!progressBar) return;
     const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    progressBar.style.width = `${Math.min(pct, 100)}%`;
+    progressBar.style.transform = `scaleX(${Math.min(pct, 100) / 100})`;
+  };
+
+  const updateScrollUi = () => {
+    updateProgress();
+
+    if (!backToTop) return;
+    const isVisible = window.scrollY > Math.max(320, window.innerHeight * 0.6);
+    backToTop.classList.toggle("is-visible", isVisible);
+    backToTop.tabIndex = isVisible ? 0 : -1;
+    backToTop.setAttribute("aria-hidden", String(!isVisible));
   };
 
   const onResize = () => {
     scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    updateProgress();
+    updateScrollUi();
   };
 
-  updateProgress();
-  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateScrollUi();
+  window.addEventListener("scroll", updateScrollUi, { passive: true });
   window.addEventListener("resize", onResize, { passive: true });
+  if ("ResizeObserver" in window) new ResizeObserver(onResize).observe(document.body);
 
-  // ---- Reveal-on-scroll ----
-  // Stagger children inside grids
-  document.querySelectorAll(
-    ".mini-grid, .programme-grid, .impact-grid, .involvement-grid, .testimonial-grid, .pathway-grid, .event-grid, .values-grid, .stats-strip"
-  ).forEach((container) => {
-    Array.from(container.children).forEach((child, i) => {
-      child.style.setProperty("--delay", `${i * 60}ms`);
-      if (!child.classList.contains("reveal")) child.classList.add("reveal");
+  if (backToTop) {
+    backToTop.addEventListener("click", (event) => {
+      focusTarget(document.querySelector("main"));
+      window.scrollTo({ top: 0, behavior: scrollBehavior(event) });
     });
-  });
-
-  const revealEls = document.querySelectorAll(".reveal");
-
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    revealEls.forEach((el) => revealObserver.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
   // ---- Stat number counter ----
@@ -57,6 +56,10 @@
     const target = Number(node.dataset.target);
     if (!target || Number.isNaN(target)) return;
     const suffix = node.dataset.suffix || "";
+    if (reducedMotion.matches) {
+      node.textContent = `${target}${suffix}`;
+      return;
+    }
     const duration = 1200;
     const start = performance.now();
 
@@ -94,14 +97,17 @@
   const siteNav = document.querySelector(".nav");
 
   if (navToggle && siteNav) {
-    const closeNav = () => {
+    const closeNav = (restoreFocus = false) => {
       navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
       siteNav.classList.remove("is-open");
+      if (restoreFocus) navToggle.focus({ preventScroll: true });
     };
 
     navToggle.addEventListener("click", () => {
       const expanded = navToggle.getAttribute("aria-expanded") === "true";
       navToggle.setAttribute("aria-expanded", String(!expanded));
+      navToggle.setAttribute("aria-label", expanded ? "Open menu" : "Close menu");
       siteNav.classList.toggle("is-open", !expanded);
     });
 
@@ -112,7 +118,7 @@
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeNav();
+      if (e.key === "Escape" && siteNav.classList.contains("is-open")) closeNav(true);
     });
 
     document.addEventListener("click", (e) => {
@@ -120,6 +126,10 @@
       if (siteNav.contains(e.target) || navToggle.contains(e.target)) return;
       closeNav();
     });
+    document.addEventListener("focusin", (e) => {
+      if (!siteNav.contains(e.target) && e.target !== navToggle) closeNav();
+    });
+    window.matchMedia("(min-width: 1025px)").addEventListener("change", () => closeNav());
   }
 
   // ---- Smooth scroll for anchor links ----
@@ -144,45 +154,40 @@
       if (!target) return;
       e.preventDefault();
       const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
-      window.scrollTo({ top, behavior: "smooth" });
+      focusTarget(target);
+      history.pushState(null, "", href);
+      window.scrollTo({ top, behavior: scrollBehavior(e) });
     });
   });
 
-  // ---- Event category filtering ----
-  const filterPills = document.querySelectorAll(".filter-pill");
-  const eventCards = document.querySelectorAll(".card--event");
-  const eventFilterStatus = document.querySelector("#event-filter-status");
-
-  if (filterPills.length && eventCards.length) {
-    const setEventFilter = (category) => {
-      let visibleCount = 0;
-
-      filterPills.forEach((p) => {
-        const active = p.dataset.category === category;
-        p.classList.toggle("filter-pill--active", active);
-        p.setAttribute("aria-pressed", String(active));
-      });
-
-      eventCards.forEach((card) => {
-        const visible = category === "all" || card.dataset.category === category;
-        card.hidden = !visible;
-        if (visible) visibleCount += 1;
-      });
-
-      if (eventFilterStatus) {
-        const label = category === "all" ? "all" : category;
-        eventFilterStatus.textContent =
-          category === "all"
-            ? `Showing all ${visibleCount} activities.`
-            : `Showing ${visibleCount} ${label} activities.`;
-      }
-    };
-
-    filterPills.forEach((pill) => {
-      pill.addEventListener("click", () => {
-        setEventFilter(pill.dataset.category || "all");
-      });
-    });
+  const programmeNames = {
+    "homework-club": "Homework club and academic support",
+    "tutoring-mentoring": "Individual tutoring and mentoring",
+    "youth-activities": "Youth activities and engagement",
+    "womens-group": "Women's group and support network",
+    "mens-group": "Men's group and community support",
+    "elderly-engagement": "Elderly community engagement",
+    "creative-arts": "Creative arts, reading, and poetry",
+  };
+  const topics = {
+    launch: { subject: "launch", message: "I'd like to come to the launch on Thursday 5 November.\n\n" },
+    idea: { subject: "general", message: "I have an idea for an activity: " },
+  };
+  const params = new URLSearchParams(window.location.search);
+  const requestedProgramme = params.get("programme");
+  const requestedTopic = params.get("topic");
+  const contactSubject = document.querySelector("#contact-subject");
+  const contactMessage = document.querySelector("#contact-message");
+  const prefillContact = (subject, message) => {
+    contactSubject.value = subject;
+    if (!contactMessage.value) contactMessage.value = message;
+  };
+  if (contactSubject && contactMessage) {
+    if (Object.hasOwn(programmeNames, requestedProgramme)) {
+      prefillContact("programmes", `I would like to know more about ${programmeNames[requestedProgramme]}.\n\n`);
+    } else if (Object.hasOwn(topics, requestedTopic)) {
+      prefillContact(topics[requestedTopic].subject, topics[requestedTopic].message);
+    }
   }
 
   // ---- Contact form helpers ----
@@ -234,6 +239,7 @@
   };
 
   const setSubmitting = (form, isSubmitting) => {
+    form.setAttribute("aria-busy", String(isSubmitting));
     const button = form.querySelector('button[type="submit"]');
     if (!button) return;
 
@@ -269,33 +275,31 @@
     return result;
   };
 
-  const openMailtoForForm = (form) => {
-    const to = form.dataset.mailto;
-    if (!to) return;
-
-    const prefix = form.dataset.subjectPrefix || "Website enquiry";
-    const fields = getFormFields(form);
-    const detailField = fields.find((field) => field.name === "subject" || field.name === "interest");
-    const detail = detailField ? fieldValue(detailField) : "";
-    const subject = detail ? `${prefix}: ${detail}` : prefix;
-    const bodyLines = fields
-      .filter((field) => field.type !== "submit" && fieldValue(field))
-      .map((field) => `${fieldLabel(field)}: ${fieldValue(field)}`);
-
-    window.location.href = buildMailto(to, subject, bodyLines.join("\n"));
-  };
-
   // ---- Form validation ----
   document.querySelectorAll(".form").forEach((form) => {
     const successMsg = form.querySelector(".form__success");
+    if (successMsg) {
+      successMsg.textContent = "";
+      successMsg.setAttribute("role", "status");
+      successMsg.setAttribute("aria-live", "polite");
+      successMsg.setAttribute("aria-atomic", "true");
+    }
+    form.querySelectorAll("[required]").forEach((field) => {
+      const errorEl = field.parentElement.querySelector(".form__error");
+      if (errorEl) {
+        errorEl.id = `${field.id}-error`;
+        const description = field.getAttribute("aria-describedby") || "";
+        field.setAttribute("aria-describedby", `${description} ${errorEl.id}`.trim());
+      }
+    });
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      if (form.getAttribute("aria-busy") === "true") return;
       let isValid = true;
       if (successMsg) {
         successMsg.classList.remove("is-visible", "form__success--error");
-        successMsg.textContent = successMsg.dataset.defaultText || successMsg.textContent;
-        successMsg.dataset.defaultText = successMsg.textContent;
+        successMsg.textContent = "";
       }
 
       form.querySelectorAll("[required]").forEach((field) => {
@@ -317,7 +321,13 @@
           field.classList.remove("is-error");
           if (errorEl) errorEl.classList.remove("is-visible");
         }
+        field.setAttribute("aria-invalid", String(field.classList.contains("is-error")));
       });
+
+      if (!isValid) {
+        form.querySelector(".is-error").focus();
+        return;
+      }
 
       if (isValid && successMsg) {
         setSubmitting(form, true);
@@ -333,12 +343,18 @@
           });
           setFormStatus(successMsg, "Thank you. Your message has been sent to Friends of Fieldway.");
         } catch {
-          openMailtoForForm(form);
           setFormStatus(
             successMsg,
-            "We could not send this automatically, so your email app should open as a fallback. You can also email roy@friendsoffieldway.org.",
+            "Your message could not be sent. Your details are still here. Please try again or use the email link below.",
             "error"
           );
+          const fallback = document.createElement("a");
+          fallback.className = "form__fallback";
+          fallback.textContent = "Email roy@friendsoffieldway.org instead";
+          fallback.href = buildMailto(form.dataset.mailto, "Website enquiry", getFormFields(form)
+            .filter((field) => field.name !== "company" && fieldValue(field))
+            .map((field) => `${fieldLabel(field)}: ${fieldValue(field)}`).join("\n"));
+          successMsg.append(document.createElement("br"), fallback);
         } finally {
           setSubmitting(form, false);
         }
@@ -349,6 +365,7 @@
     form.querySelectorAll("input, select, textarea").forEach((field) => {
       field.addEventListener("input", () => {
         field.classList.remove("is-error");
+        field.removeAttribute("aria-invalid");
         const errorEl = field.parentElement.querySelector(".form__error");
         if (errorEl) errorEl.classList.remove("is-visible");
       });

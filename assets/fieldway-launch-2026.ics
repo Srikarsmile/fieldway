@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Friends of Fieldway//Launch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:launch-20261105@friendsoffieldway.org
+DTSTAMP:20261011T000000Z
+DTSTART:20261105T140000Z
+DTEND:20261105T160000Z
+SUMMARY:Friends of Fieldway launch
+LOCATION:The Family Centre\, New Addington\, Croydon\, CR0 9AZ
+DESCRIPTION:Come and meet us\, hear about our plans\, and help shape future activities. https://friendsoffieldway.org/events.html
+URL:https://friendsoffieldway.org/events.html
+END:VEVENT
+END:VCALENDAR
