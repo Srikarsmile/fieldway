@@ -79,7 +79,8 @@
 @media (hover: hover) and (pointer: fine) {
   .card:hover,
   .value-card:hover,
-  .partner-card:hover {
+  .partner-card:hover,
+  .programme-detail:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
   }
@@ -1460,117 +1461,75 @@ p { color: var(--grey); }
 }
 }
 
-.programme-jump__index {
-  color: var(--green);
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+/* Programme cards: photo on top, details below, two to a row. */
+.programme-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
 }
 
 .programme-detail {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-2xl);
-  align-items: stretch;
-  margin-bottom: var(--space-lg);
-  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-soft);
+  overflow: hidden;
   scroll-margin-top: 92px;
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
 }
 
-.programme-detail:last-child { margin-bottom: 0; }
+.programme-detail__media {
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: var(--cream);
+}
 
-#homework-club { --programme-accent: var(--sage); }
-#tutoring-mentoring { --programme-accent: var(--teal); }
-#youth-activities { --programme-accent: var(--peach-dark); }
-#womens-group { --programme-accent: var(--green); }
-#mens-group { --programme-accent: var(--mustard-dark); }
-#elderly-engagement { --programme-accent: var(--teal); }
-#creative-arts { --programme-accent: var(--gold); }
+.programme-detail__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .programme-detail__content {
-  position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: center;
   min-width: 0;
+  padding: var(--space-lg);
 }
-
-/* Keep copy distinct from the adjacent photographs in the two reverse-layout sections. */
-.programme-detail--neutral-copy {
-  background: var(--white);
-}
-
-.programme-detail--neutral-copy .programme-detail__content {
-  position: relative;
-  z-index: 1;
-  padding: 0;
-  background: var(--white);
-  border: 0;
-  box-shadow: none;
-}
-
-.programme-detail--neutral-copy .programme-detail__media {
-  position: relative;
-  z-index: 0;
-}
-
-.programme-detail--reverse .programme-detail__content { order: 2; }
-.programme-detail--reverse .programme-detail__media { order: 1; }
 
 .programme-detail__header {
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-md);
-  padding-right: 48px;
-}
-
-.programme-detail__number {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-width: 42px;
-  min-height: 28px;
-  padding: 4px 8px;
-  color: var(--charcoal);
-  background: var(--cream);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-btn);
-  box-shadow: inset 3px 0 0 var(--programme-accent, var(--green));
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .programme-detail__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 10px;
   color: var(--accent, var(--green));
   background: var(--accent-bg, var(--green-light));
   flex-shrink: 0;
 }
 
-.programme-detail__icon svg { width: 28px; height: 28px; }
+.programme-detail__icon svg { width: 24px; height: 24px; }
 
 .programme-detail__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-h3);
-  font-weight: 600;
-  color: var(--charcoal);
   min-width: 0;
-  padding-top: 4px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--charcoal);
 }
 
 .programme-detail__text {
@@ -1617,16 +1576,13 @@ p { color: var(--grey); }
   font-size: var(--text-small);
 }
 
-.programme-detail .btn { margin-top: var(--space-md); }
-
-.programme-status {
-  margin-bottom: var(--space-sm);
-  color: var(--green);
-  font-size: var(--text-small);
-  font-weight: 600;
+/* Buttons sit at the bottom so they line up across a row. */
+.programme-detail__content > .btn {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
-.programme-more { border-block: 1px solid var(--border); }
+.programme-more { margin-bottom: var(--space-md); border-block: 1px solid var(--border); }
 .programme-more summary {
   padding: 12px 0;
   min-height: 48px;
@@ -1636,30 +1592,23 @@ p { color: var(--grey); }
 .programme-more[open] summary { margin-bottom: var(--space-xs); }
 .programme-more summary::marker { color: var(--green); }
 
-.programme-detail__media {
-  min-width: 0;
-  min-height: 0;
-  align-self: center;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-img);
-  overflow: hidden;
+/* Closing card that completes the grid. */
+.programme-detail--suggest {
+  justify-content: center;
+  background: var(--green-light);
+  border: 1px dashed rgba(27, 94, 59, 0.3);
   box-shadow: none;
 }
 
-.programme-detail__media img {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  object-fit: cover;
-}
+.programme-detail--suggest .programme-detail__content { flex: 0 1 auto; }
+.programme-detail--suggest .programme-detail__icon { margin-bottom: var(--space-md); background: var(--white); }
+.programme-detail--suggest .programme-detail__title { margin-bottom: var(--space-sm); }
 
-#homework-club .programme-detail__media img { object-position: center 46%; }
-#tutoring-mentoring .programme-detail__media img { object-position: center 44%; }
-#womens-group .programme-detail__media img { object-position: center; }
-#mens-group .programme-detail__media img { object-position: center 42%; }
-#youth-activities .programme-detail__media img { object-position: center 44%; }
-#elderly-engagement .programme-detail__media img,
-#creative-arts .programme-detail__media img { object-position: center; }
+.programme-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
 
 /* ---------- About Page ---------- */
 .about-story {
@@ -2818,7 +2767,6 @@ p { color: var(--grey); }
   .gallery-grid { grid-auto-rows: 170px; }
   .footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer__brand { grid-column: 1 / -1; }
-  .programme-detail { gap: var(--space-xl); }
 
   .site-header .container {
     flex-wrap: wrap;
@@ -2946,22 +2894,8 @@ p { color: var(--grey); }
     font-size: 0.8rem;
   }
 
-  .programme-detail {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-
-  .programme-detail__media { aspect-ratio: 16 / 9; }
-
-  .programme-detail--neutral-copy { background: var(--white); }
-
-  .programme-detail--neutral-copy .programme-detail__content {
-    padding: 0;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  .programme-list { grid-template-columns: minmax(0, 1fr); }
+  .programme-detail__media { aspect-ratio: 16 / 8; }
 
   .programme-jump .container {
     display: block;
@@ -2997,8 +2931,6 @@ p { color: var(--grey); }
       linear-gradient(0deg, rgba(21, 73, 46, 0.24), rgba(21, 73, 46, 0.12));
   }
 
-  .programme-detail--reverse .programme-detail__content { order: 1; }
-  .programme-detail--reverse .programme-detail__media { order: 2; }
 
   .about-story {
     grid-template-columns: 1fr;
@@ -3212,45 +3144,9 @@ p { color: var(--grey); }
   .founder-closer .hero__actions { flex-direction: column; }
   .founder-closer .btn { width: 100%; }
 
-  /* Programme cards — make the title a full-width row on narrow screens. */
-  .programme-detail {
-    gap: var(--space-md);
-    padding: var(--space-md);
-  }
-
-  .programme-detail__header {
-    display: grid;
-    grid-template-columns: 48px minmax(0, 1fr);
-    grid-template-areas:
-      "icon number"
-      "title title";
-    align-items: center;
-    gap: var(--space-xs) var(--space-sm);
-    margin-bottom: var(--space-md);
-    padding-right: 0;
-  }
-
-  .programme-detail__icon {
-    grid-area: icon;
-    width: 48px;
-    height: 48px;
-  }
-
-  .programme-detail__number {
-    position: static;
-    grid-area: number;
-    justify-self: end;
-  }
-
-  .programme-detail__title {
-    grid-area: title;
-    padding-top: 0;
-    font-size: 1.5rem;
-    overflow-wrap: normal;
-    word-break: normal;
-  }
-
-  .programme-detail__media img { min-height: 0; }
+  /* Programme cards — tighter padding and full-width buttons on phones. */
+  .programme-detail__content { padding: var(--space-md); }
+  .programme-detail__title { font-size: 1.3rem; overflow-wrap: normal; word-break: normal; }
   .programme-detail .btn { width: 100%; padding-inline: var(--space-md); }
 
   .page-hero--image {
@@ -3299,7 +3195,7 @@ p { color: var(--grey); }
 
   .js .reveal:not(section) { opacity: 1; animation: none; }
   .card:hover, .value-card:hover, .partner-card:hover,
-  .gallery-item:hover img { transform: none; }
+  .programme-detail:hover, .gallery-item:hover img { transform: none; }
   .btn, .header-contact-cta, .programme-jump__link, .event__action,
   .filter-pill, .back-to-top.is-visible { transform: none !important; }
 }

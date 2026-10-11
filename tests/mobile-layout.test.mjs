@@ -6,13 +6,10 @@ const styles = await readFile(new URL('../styles.css', import.meta.url), 'utf8')
 const tabletStyles = styles.slice(styles.indexOf('@media (max-width: 768px)'));
 const phoneStyles = styles.slice(styles.indexOf('@media (max-width: 480px)'));
 
-test('mobile programme card titles receive a full row', () => {
-  assert.match(
-    phoneStyles,
-    /\.programme-detail__header\s*\{[\s\S]*grid-template-areas:\s*"icon number"\s*"title title"/,
-  );
-  assert.match(phoneStyles, /\.programme-detail__number\s*\{[\s\S]*position:\s*static/);
-  assert.match(phoneStyles, /\.programme-detail__title\s*\{[\s\S]*overflow-wrap:\s*normal/);
+test('programme cards stack on mobile and keep titles readable', () => {
+  assert.match(styles, /\.programme-list\s*\{[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
+  assert.match(tabletStyles, /\.programme-list\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+  assert.match(phoneStyles, /\.programme-detail__title\s*\{[^}]*overflow-wrap:\s*normal/);
 });
 
 test('small contact cards can shrink and wrap long email addresses', () => {
