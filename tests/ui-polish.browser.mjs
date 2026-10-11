@@ -27,6 +27,16 @@ try {
   const page = await browser.newPage();
   const failures = [];
   page.on('pageerror', error => failures.push(error.message));
+  for (const width of [1025, 1100, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(base);
+    await page.evaluate(() => document.fonts.ready);
+    const left = await page.locator('.hero__floating--top').boundingBox();
+    const right = await page.locator('.hero__floating--bottom').boundingBox();
+    assert.ok(left.x + left.width + 15 <= right.x, `hero labels need a gap at ${width}px`);
+    await page.locator('.hero__media img').evaluate(el => el.decode());
+    await page.screenshot({ path: `${screenshots}/hero-${width}.png` });
+  }
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     for (const file of ['index.html', 'about.html', 'programmes.html', 'events.html', 'get-involved.html', 'contact.html', 'privacy.html']) {
@@ -49,6 +59,16 @@ try {
       assert.equal(layout.overflow, false, `${file} overflow at ${width}`);
       assert.deepEqual(layout.brokenImages, [], `${file} broken images`);
       assert.deepEqual(layout.spills, [], `${file} text spills at ${width}`);
+      for (const link of await page.locator('.map-link').all()) {
+        const url = new URL(await link.getAttribute('href'));
+        assert.equal(url.origin, 'https://www.google.com');
+        assert.equal(url.pathname, '/maps/dir/');
+        assert.equal(url.searchParams.get('api'), '1');
+        assert.equal(url.searchParams.get('destination'), 'The Family Centre, Fieldway, New Addington, Croydon, CR0 9AZ, UK');
+        assert.equal(await link.getAttribute('target'), '_blank');
+        assert.match(await link.getAttribute('rel'), /noopener/);
+        assert.match(await link.textContent(), /opens Google Maps/);
+      }
       if ([390, 1440].includes(width) && ['index.html', 'programmes.html', 'contact.html'].includes(file)) {
         await page.screenshot({ path: `${screenshots}/${file}-${width}.png`, fullPage: true });
         await page.screenshot({ path: `${screenshots}/${file}-${width}-viewport.png` });
