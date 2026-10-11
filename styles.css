@@ -69,6 +69,7 @@
 
   /* Hugeicons (MIT) arrows, used as masks so they take the text colour. */
   --icon-arrow-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18.5 12L4.99997 12' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
+  --icon-calendar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M16 2V6M8 2V6' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M3 10H21' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M12.1258 14H12.0008M12.1258 18H12.0008M7.625 14H7.5M7.625 18H7.5M16.625 14H16.5M12.2508 14C12.2508 14.1381 12.1389 14.25 12.0008 14.25C11.8628 14.25 11.7508 14.1381 11.7508 14C11.7508 13.8619 11.8628 13.75 12.0008 13.75C12.1389 13.75 12.2508 13.8619 12.2508 14ZM12.2508 18C12.2508 18.1381 12.1389 18.25 12.0008 18.25C11.8628 18.25 11.7508 18.1381 11.7508 18C11.7508 17.8619 11.8628 17.75 12.0008 17.75C12.1389 17.75 12.2508 17.8619 12.2508 18ZM7.75 14C7.75 14.1381 7.63807 14.25 7.5 14.25C7.36193 14.25 7.25 14.1381 7.25 14C7.25 13.8619 7.36193 13.75 7.5 13.75C7.63807 13.75 7.75 13.8619 7.75 14ZM7.75 18C7.75 18.1381 7.63807 18.25 7.5 18.25C7.36193 18.25 7.25 18.1381 7.25 18C7.25 17.8619 7.36193 17.75 7.5 17.75C7.63807 17.75 7.75 17.8619 7.75 18ZM16.75 14C16.75 14.1381 16.6381 14.25 16.5 14.25C16.3619 14.25 16.25 14.1381 16.25 14C16.25 13.8619 16.3619 13.75 16.5 13.75C16.6381 13.75 16.75 13.8619 16.75 14Z' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
   --icon-location: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13.6177 21.367C13.1841 21.773 12.6044 22 12.0011 22C11.3978 22 10.8182 21.773 10.3845 21.367C6.41302 17.626 1.09076 13.4469 3.68627 7.37966C5.08963 4.09916 8.45834 2 12.0011 2C15.5439 2 18.9126 4.09916 20.316 7.37966C22.9082 13.4393 17.599 17.6389 13.6177 21.367Z' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.5 11C15.5 12.933 13.933 14.5 12 14.5C10.067 14.5 8.5 12.933 8.5 11C8.5 9.067 10.067 7.5 12 7.5C13.933 7.5 15.5 9.067 15.5 11Z' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
 
   --container-max: 1280px;
@@ -183,8 +184,9 @@ h1, h2, h3,
 
 .nowrap { white-space: nowrap; }
 
-/* Venue addresses open directions in Google Maps. */
-.map-link {
+/* Venue addresses open directions in Google Maps; launch dates add the event to a calendar. */
+.map-link,
+.calendar-link {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--green);
@@ -192,7 +194,8 @@ h1, h2, h3,
   text-underline-offset: 3px;
 }
 
-.map-link::before {
+.map-link::before,
+.calendar-link::before {
   margin-right: 0.25em;
   color: var(--green);
 }
@@ -201,7 +204,8 @@ h1, h2, h3,
 .card__link::after,
 .event__action::after,
 .hero__inline-link::after,
-.map-link::before {
+.map-link::before,
+.calendar-link::before {
   content: '';
   display: inline-block;
   width: 1em;
@@ -217,14 +221,31 @@ h1, h2, h3,
   mask-image: var(--icon-location);
 }
 
+.calendar-link::before {
+  -webkit-mask-image: var(--icon-calendar);
+  mask-image: var(--icon-calendar);
+}
+
+/* Footer links are flex rows; these multi-line links need to flow as text. */
+.footer__col .map-link,
+.footer__col .calendar-link {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+}
+
 .site-footer .map-link,
-.site-footer .map-link::before { color: rgba(255, 255, 255, 0.85); text-decoration-color: rgba(255, 255, 255, 0.5); }
+.site-footer .map-link::before,
+.site-footer .calendar-link,
+.site-footer .calendar-link::before { color: rgba(255, 255, 255, 0.85); text-decoration-color: rgba(255, 255, 255, 0.5); }
 
 .header-contact-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 @media (hover: hover) and (pointer: fine) {
-.map-link:hover { color: var(--green); }
-.site-footer .map-link:hover { color: var(--white); }
+.map-link:hover,
+.calendar-link:hover { color: var(--green); }
+.site-footer .map-link:hover,
+.site-footer .calendar-link:hover { color: var(--white); }
 }
 
 .sr-only {
