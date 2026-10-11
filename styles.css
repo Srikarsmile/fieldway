@@ -879,6 +879,7 @@ p { color: var(--grey); }
 .section--green .card--involvement .card__text { color: rgba(255, 255, 255, 0.8); }
 .section--green .card--involvement .card__link { color: var(--white); }
 .section--green .card--involvement .card__link::before { background: var(--white); }
+.section--green .card--involvement .card__icon { color: var(--white); }
 
 /* ---------- Event Cards ---------- */
 .event-grid {
