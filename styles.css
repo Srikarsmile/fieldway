@@ -163,6 +163,32 @@ h1, h2, h3,
   text-wrap: balance;
 }
 
+.nowrap { white-space: nowrap; }
+
+/* Venue addresses open directions in Google Maps. */
+.map-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.map-link::after {
+  content: " \2197";
+  content: " \2197" / "";
+  color: var(--green);
+  font-size: 0.85em;
+}
+
+.site-footer .map-link,
+.site-footer .map-link::after { color: rgba(255, 255, 255, 0.85); text-decoration-color: rgba(255, 255, 255, 0.5); }
+
+@media (hover: hover) and (pointer: fine) {
+.map-link:hover { color: var(--green); }
+.site-footer .map-link:hover { color: var(--white); }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
