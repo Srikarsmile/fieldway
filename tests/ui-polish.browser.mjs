@@ -42,6 +42,9 @@ try {
     for (const file of ['index.html', 'about.html', 'programmes.html', 'events.html', 'get-involved.html', 'contact.html', 'privacy.html']) {
       await page.goto(`${base}/${file}`);
       await page.evaluate(() => document.fonts.ready);
+      if (file === 'events.html') {
+        assert.ok(await page.locator('.launch-card__qr').isVisible(), `launch QR code is visible at ${width}px`);
+      }
       for (const img of await page.locator('img').all()) {
         if (await img.isVisible()) {
           await img.scrollIntoViewIfNeeded();
@@ -69,7 +72,7 @@ try {
         assert.match(await link.getAttribute('rel'), /noopener/);
         assert.match(await link.textContent(), /opens Google Maps/);
       }
-      if ([390, 1440].includes(width) && ['index.html', 'programmes.html', 'contact.html'].includes(file)) {
+      if ([390, 1440].includes(width) && ['index.html', 'programmes.html', 'events.html', 'contact.html'].includes(file)) {
         await page.screenshot({ path: `${screenshots}/${file}-${width}.png`, fullPage: true });
         await page.screenshot({ path: `${screenshots}/${file}-${width}-viewport.png` });
       }

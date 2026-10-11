@@ -2750,8 +2750,6 @@ p { color: var(--grey); }
 @media (max-width: 768px) {
   .launch-card { padding: var(--space-lg) var(--space-md); }
   .launch-card__details { grid-template-columns: 1fr; gap: var(--space-md); }
-  /* Visitors on a phone already have the directions button. */
-  .launch-card__qr { display: none; }
 }
 
 @media (max-width: 480px) {
