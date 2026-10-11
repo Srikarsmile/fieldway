@@ -1596,7 +1596,7 @@ p { color: var(--grey); }
 .programme-detail--suggest {
   justify-content: center;
   background: var(--green-light);
-  border: 1px dashed rgba(27, 94, 59, 0.3);
+  border: 1px solid rgba(27, 94, 59, 0.15);
   box-shadow: none;
 }
 
@@ -2524,25 +2524,10 @@ p { color: var(--grey); }
 
 .founder-closer .hero__actions { margin-bottom: 0; }
 
-/* ---------- Home: Story CTA block inside testimonials ---------- */
+/* ---------- Home: Call to action under the gallery ---------- */
 .story-cta {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
   text-align: center;
-  padding: var(--space-lg);
-  border: 1.5px dashed var(--border-strong);
-  border-radius: var(--radius-card);
-  background: var(--white);
-}
-
-.story-cta h3 {
-  font-size: var(--text-h3);
-  margin-bottom: var(--space-xs);
-  color: var(--green);
-}
-
-.story-cta p {
-  color: var(--grey);
-  margin-bottom: var(--space-md);
 }
 
 /* ---------- Home: About story single-column variant ---------- */
