@@ -110,7 +110,8 @@ try {
   assert.equal(await page.evaluate(() => window.lastScrollBehavior), 'instant');
   assert.equal(await page.evaluate(() => document.activeElement.id), 'womens-group');
   await page.goto(`${base}/events.html`);
-  assert.equal(await page.locator('a[href$="fieldway-launch-2026.ics"]').count(), 1);
+  assert.equal(await page.getByRole('link', { name: 'Add to calendar' }).count(), 1);
+  assert.ok(await page.locator('.calendar-link[href$="fieldway-launch-2026.ics"]').count() >= 1);
   await page.getByRole('link', { name: /Let us know you/ }).click();
   await page.waitForURL('**/contact.html?topic=launch#contact-form');
   assert.equal(await page.locator('#contact-subject').inputValue(), 'launch');
