@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Opt in before streamed HTML reaches external stylesheets. -->
+    <style>
+      @view-transition { navigation: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        @view-transition { navigation: none; }
+      }
+    </style>
     <title>Privacy Policy | Friends of Fieldway</title>
     <meta name="description" content="How Friends of Fieldway collects, uses, and protects the personal information you share with us." />
     <meta name="robots" content="index, follow" />
@@ -26,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20261011-5" />
+    <link rel="stylesheet" href="./styles.css?v=20261011-7" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -56,7 +63,7 @@
         </nav>
         <a class="header-contact-cta" href="./contact.html">
           <span>Get in touch</span>
-          <span aria-hidden="true">&rarr;</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.5 12L4.99997 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
         </a>
 
       </div>
@@ -186,10 +193,7 @@
     </footer>
 
     <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 19V5" />
-        <path d="m6 11 6-6 6 6" />
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5.5V19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18 11C18 11 13.5811 5.00001 12 5C10.4188 4.99999 6 11 6 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
     </button>
     <script src="./script.js?v=20261011-3"></script>
   </body>

@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Opt in before streamed HTML reaches external stylesheets. -->
+    <style>
+      @view-transition { navigation: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        @view-transition { navigation: none; }
+      }
+    </style>
     <title>About Us | Friends of Fieldway</title>
     <meta name="description" content="Learn about Friends of Fieldway, our story, our vision, and our commitment to creating an inclusive community hub for education, wellbeing, and connection." />
     <meta property="og:title" content="About Us | Friends of Fieldway" />
@@ -26,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20261011-5" />
+    <link rel="stylesheet" href="./styles.css?v=20261011-7" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -56,7 +63,7 @@
         </nav>
         <a class="header-contact-cta" href="./contact.html">
           <span>Get in touch</span>
-          <span aria-hidden="true">&rarr;</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.5 12L4.99997 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
         </a>
 
       </div>
@@ -125,46 +132,28 @@
           <div class="values-grid">
             <div class="value-card reveal">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 6C14 6 8 14 8 22c0 6 4 10 8 14l8 8 8-8c4-4 8-8 8-14 0-8-6-16-16-16z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M15.2053 10.7181C13.7947 9.60121 11 7.0478 11 4.74998C11 3.23121 12.0526 2 13.5 2C14.25 2 15 2.2647 16 3.32352C17 2.2647 17.75 2 18.5 2C19.9474 2 21 3.23121 21 4.74998C21 7.0478 18.2053 9.60121 16.7947 10.7181C16.32 11.094 15.68 11.094 15.2053 10.7181Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M2 19V13C2 12.535 2 12.3025 2.05111 12.1118C2.18981 11.5941 2.59413 11.1898 3.11177 11.0511C3.30252 11 3.53501 11 4 11C4.46499 11 4.69748 11 4.88823 11.0511C5.40587 11.1898 5.81019 11.5941 5.94889 12.1118C6 12.3025 6 12.535 6 13V19C6 19.465 6 19.6975 5.94889 19.8882C5.81019 20.4059 5.40587 20.8102 4.88823 20.9489C4.69748 21 4.46499 21 4 21C3.53501 21 3.30252 21 3.11177 20.9489C2.59413 20.8102 2.18981 20.4059 2.05111 19.8882C2 19.6975 2 19.465 2 19Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M6 12H7.76845C8.58101 12 9.38511 12.165 10.132 12.4851L14.8574 14.5103C15.5506 14.8074 16 15.489 16 16.2431C16 16.9373 15.4373 17.5 14.7431 17.5H14.0986C13.3729 17.5 12.6538 17.3615 11.98 17.092L10.5 16.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14 17.5H20.5749C21.362 17.5 22 18.138 22 18.9251C22 19.5613 21.5782 20.1205 20.9664 20.2953L15.7451 21.7871C15.2508 21.9283 14.7392 22 14.2251 22C13.7437 22 13.2645 21.9372 12.7994 21.8132L6 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Caring</h3>
               <p>Everything we do is rooted in genuine care for the people in our community and their wellbeing.</p>
             </div>
             <div class="value-card reveal">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="16" cy="20" r="6"/>
-                  <circle cx="32" cy="20" r="6"/>
-                  <path d="M8 38v-2c0-4 4-8 8-8h0"/>
-                  <path d="M24 38v-2c0-4 4-8 8-8h0"/>
-                  <path d="M24 28c-2 0-4 2-4 4"/>
-                  <path d="M24 28c2 0 4 2 4 4"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.4995 20.5C18.2663 17.5685 15.8417 15.2477 12.808 15.0521L11.9995 15C11.7107 15.0076 11.4416 15.0178 11.1877 15.0298C8.18075 15.1723 5.7304 17.5974 5.49951 20.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M15.2495 9.25C15.2495 11.0449 13.7944 12.5 11.9995 12.5C10.2046 12.5 8.74952 11.0449 8.74952 9.25C8.74952 7.45507 10.2046 6 11.9995 6C13.7944 6 15.2495 7.45507 15.2495 9.25Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M5.50249 8.5C5.17908 7.99485 4.99158 7.39432 4.99158 6.75C4.99158 4.95507 6.44665 3.5 8.24157 3.5C8.68752 3.5 9.1125 3.58982 9.49939 3.75235" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18.4963 8.5C18.8197 7.99485 19.0072 7.39432 19.0072 6.75C19.0072 4.95507 17.5521 3.5 15.7572 3.5C15.3113 3.5 14.8863 3.58982 14.4994 3.75235" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M22.0007 17.9996C21.8208 15.7374 19.9995 13.5 17.9995 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M1.99927 17.9996C2.17923 15.7374 4.00049 13.5 6.00049 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Inclusive</h3>
               <p>We welcome everyone regardless of age, background, or circumstance. Our space belongs to all.</p>
             </div>
             <div class="value-card reveal">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 40V22l12-12 12 12v18"/>
-                  <path d="M20 40V32h8v8"/>
-                  <path d="M8 40h32"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.7088 3.49534C16.8165 2.55382 14.5009 2 12 2C9.4991 2 7.1835 2.55382 5.29116 3.49534C4.36318 3.95706 3.89919 4.18792 3.4496 4.91378C3 5.63965 3 6.34248 3 7.74814V11.2371C3 16.9205 7.54236 20.0804 10.173 21.4338C10.9067 21.8113 11.2735 22 12 22C12.7265 22 13.0933 21.8113 13.8269 21.4338C16.4576 20.0804 21 16.9205 21 11.2371L21 7.74814C21 6.34249 21 5.63966 20.5504 4.91378C20.1008 4.18791 19.6368 3.95706 18.7088 3.49534Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Reliable</h3>
               <p>Our community can count on us to be consistent, trustworthy, and always there when needed.</p>
             </div>
             <div class="value-card reveal">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 8v32"/>
-                  <path d="M16 16l8-8 8 8"/>
-                  <path d="M12 24h24"/>
-                  <circle cx="24" cy="36" r="4"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M9.5 6.5C9.99153 5.9943 11.2998 4 12 4M14.5 6.5C14.0085 5.9943 12.7002 4 12 4M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18.3633 10.6357L16.9491 12.05" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M3 17H5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M5.63657 10.6356L7.05078 12.0498" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M21 17H19" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M21 20H3" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M16 17C16 14.7909 14.2091 13 12 13C9.79086 13 8 14.7909 8 17" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Hopeful</h3>
               <p>We believe in the potential of every person and the power of community to create positive change.</p>
@@ -272,10 +261,7 @@
     </footer>
 
     <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 19V5" />
-        <path d="m6 11 6-6 6 6" />
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5.5V19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18 11C18 11 13.5811 5.00001 12 5C10.4188 4.99999 6 11 6 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
     </button>
     <script src="./script.js?v=20261011-3"></script>
   </body>

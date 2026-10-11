@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Opt in before streamed HTML reaches external stylesheets. -->
+    <style>
+      @view-transition { navigation: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        @view-transition { navigation: none; }
+      }
+    </style>
     <title>Friends of Fieldway | A Place for Community, Learning, and Wellbeing</title>
     <meta name="description" content="Friends of Fieldway is a community-led initiative building local support, social connection, wellbeing activities, creative opportunities, and learning spaces for Fieldway residents." />
     <meta name="keywords" content="community hub, educational support, homework club, youth activities, women's support group, men's community group, elderly social activities, community wellbeing programmes, creative arts community centre" />
@@ -49,7 +56,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20261011-5" />
+    <link rel="stylesheet" href="./styles.css?v=20261011-7" />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -79,7 +86,7 @@
         </nav>
         <a class="header-contact-cta" href="./contact.html">
           <span>Get in touch</span>
-          <span aria-hidden="true">&rarr;</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.5 12L4.99997 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
         </a>
 
       </div>
@@ -134,19 +141,19 @@
           <div class="decor-band" aria-hidden="true">
             <span class="decor-band__line">&nbsp;</span>
             <span class="decor-band__dot decor-band__dot--green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M10.4107 19.9677C7.58942 17.858 2 13.0348 2 8.69444C2 5.82563 4.10526 3.5 7 3.5C8.5 3.5 10 4 12 6C14 4 15.5 3.5 17 3.5C19.8947 3.5 22 5.82563 22 8.69444C22 13.0348 16.4106 17.858 13.5893 19.9677C12.6399 20.6776 11.3601 20.6776 10.4107 19.9677Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <span class="decor-band__dot decor-band__dot--teal">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/><path d="M15 21v-2a4 4 0 0 0-3-3.87"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.4995 20.5C18.2663 17.5685 15.8417 15.2477 12.808 15.0521L11.9995 15C11.7107 15.0076 11.4416 15.0178 11.1877 15.0298C8.18075 15.1723 5.7304 17.5974 5.49951 20.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M15.2495 9.25C15.2495 11.0449 13.7944 12.5 11.9995 12.5C10.2046 12.5 8.74952 11.0449 8.74952 9.25C8.74952 7.45507 10.2046 6 11.9995 6C13.7944 6 15.2495 7.45507 15.2495 9.25Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M5.50249 8.5C5.17908 7.99485 4.99158 7.39432 4.99158 6.75C4.99158 4.95507 6.44665 3.5 8.24157 3.5C8.68752 3.5 9.1125 3.58982 9.49939 3.75235" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18.4963 8.5C18.8197 7.99485 19.0072 7.39432 19.0072 6.75C19.0072 4.95507 17.5521 3.5 15.7572 3.5C15.3113 3.5 14.8863 3.58982 14.4994 3.75235" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M22.0007 17.9996C21.8208 15.7374 19.9995 13.5 17.9995 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M1.99927 17.9996C2.17923 15.7374 4.00049 13.5 6.00049 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <span class="decor-band__dot decor-band__dot--mustard">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <span class="decor-band__dot decor-band__dot--sage">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 10a7 7 0 0 1 14 0"/><path d="M5 10c0 4 3 7 7 11"/><path d="M19 10c0 4-3 7-7 11"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 10C18 10 12 14 12 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M9.34882 11.1825C7.73784 12.3891 5.44323 12.26 3.9785 10.7953C1.55484 8.37164 2.03957 3.03957 2.03957 3.03957C2.03957 3.03957 7.37164 2.55484 9.7953 4.9785C10.7548 5.93803 11.1412 7.25369 10.9543 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14.9638 12.8175C13.644 11.3832 13.6797 9.14983 15.0708 7.75867C17.2252 5.6043 21.9648 6.03517 21.9648 6.03517C21.9648 6.03517 22.3957 10.7748 20.2413 12.9292C19.4877 13.6828 18.487 14.0386 17.5 13.9967" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M6 7C6 7 12 12 12 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <span class="decor-band__dot decor-band__dot--peach">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v-2a4 4 0 0 1 8 0v2"/><path d="M6 13h12l-1 7H7z"/><path d="M12 3v3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.2505 10.5H19.6403C21.4918 10.5 22.0421 10.7655 21.9975 12.0838C21.9237 14.2674 20.939 16.8047 17 17.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M5.94627 20.6145C2.57185 18.02 2.07468 14.3401 2.00143 10.5001C1.96979 8.8413 2.45126 8.5 4.65919 8.5H15.3408C17.5487 8.5 18.0302 8.8413 17.9986 10.5001C17.9253 14.3401 17.4281 18.02 14.0537 20.6145C13.0934 21.3528 12.2831 21.5 10.9194 21.5H9.08064C7.71686 21.5 6.90658 21.3528 5.94627 20.6145Z" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M11.3089 2.5C10.7622 2.83861 10.0012 4 10.0012 5.5M7.53971 4C7.53971 4 7 4.5 7 5.5M14.0012 4C13.7279 4.1693 13.5 5 13.5 5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <span class="decor-band__line">&nbsp;</span>
           </div>
@@ -163,31 +170,21 @@
           <div class="values-grid values-grid--three">
             <div class="value-card reveal" style="--accent: var(--green); --accent-bg: var(--green-light)">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 24c4-8 11-12 20-12s16 4 20 12c-4 8-11 12-20 12s-16-4-20-12z"/>
-                  <circle cx="24" cy="24" r="5"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" /><path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" /></svg>
               </div>
               <h3>Seen</h3>
               <p>Known by name, noticed when you walk through the door.</p>
             </div>
             <div class="value-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="16" cy="16" r="6"/>
-                  <circle cx="32" cy="16" r="6"/>
-                  <path d="M6 38v-2c0-5 4-8 10-8s10 3 10 8v2"/>
-                  <path d="M22 38v-2c0-5 4-8 10-8s10 3 10 8v2"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M16 21C15.7668 18.0685 13.3422 15.7477 10.3085 15.5521L9.49999 15.5C9.21121 15.5076 8.94209 15.5178 8.68816 15.5298C5.68124 15.6723 3.23089 18.0974 3 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M12.75 9.75C12.75 11.5449 11.2949 13 9.5 13C7.70508 13 6.25 11.5449 6.25 9.75C6.25 7.95507 7.70508 6.5 9.5 6.5C11.2949 6.5 12.75 7.95507 12.75 9.75Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M21 17.501C20.7709 14.6314 18.4541 12.2748 15.5 11.9961" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M15.9877 9C16.8965 8.42434 17.5001 7.40788 17.5001 6.25C17.5001 4.45507 16.0496 3 14.2602 3C13.3811 3 12.5838 3.35121 12.0001 3.92139" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Included</h3>
               <p>Whoever you are, wherever you're from, you're welcome here.</p>
             </div>
             <div class="value-card reveal" style="--accent: var(--gold); --accent-bg: var(--gold-light)">
               <div class="value-card__icon">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12.828 6.00096C12.9388 5.68791 12.999 5.35099 12.999 5C12.999 3.34315 11.6559 2 9.99904 2C8.34219 2 6.99904 3.34315 6.99904 5C6.99904 5.35099 7.05932 5.68791 7.17008 6.00096C4.88532 6.0093 3.66601 6.09039 2.87772 6.87868C2.08951 7.66689 2.00836 8.88603 2 11.1704C2.31251 11.06 2.64876 11 2.99904 11C4.6559 11 5.99904 12.3431 5.99904 14C5.99904 15.6569 4.6559 17 2.99904 17C2.64876 17 2.31251 16.94 2 16.8296C2.00836 19.114 2.08951 20.3331 2.87772 21.1213C3.66593 21.9095 4.88508 21.9907 7.16941 21.999C7.05908 21.6865 6.99904 21.3503 6.99904 21C6.99904 19.3431 8.34219 18 9.99904 18C11.6559 18 12.999 19.3431 12.999 21C12.999 21.3503 12.939 21.6865 12.8287 21.999C15.113 21.9907 16.3322 21.9095 17.1204 21.1213C17.9086 20.333 17.9897 19.1137 17.9981 16.829C18.3111 16.9397 18.648 17 18.999 17C20.6559 17 21.999 15.6569 21.999 14C21.999 12.3431 20.6559 11 18.999 11C18.648 11 18.3111 11.0603 17.9981 11.171C17.9897 8.88627 17.9086 7.66697 17.1204 6.87868C16.3321 6.09039 15.1128 6.0093 12.828 6.00096Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3>Part of something</h3>
               <p>Whether you've lived here for years or just arrived, this is for you.</p>
@@ -268,12 +265,7 @@
           <div class="involvement-grid involvement-grid--four">
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--gold); --accent-bg: rgba(255,255,255,0.15)">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="6" y="10" width="36" height="30" rx="3"/>
-                  <path d="M6 18h36"/>
-                  <path d="M16 6v8"/>
-                  <path d="M32 6v8"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M16 2V6M8 2V6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M3 10H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M12.1258 14H12.0008M12.1258 18H12.0008M7.625 14H7.5M7.625 18H7.5M16.625 14H16.5M12.2508 14C12.2508 14.1381 12.1389 14.25 12.0008 14.25C11.8628 14.25 11.7508 14.1381 11.7508 14C11.7508 13.8619 11.8628 13.75 12.0008 13.75C12.1389 13.75 12.2508 13.8619 12.2508 14ZM12.2508 18C12.2508 18.1381 12.1389 18.25 12.0008 18.25C11.8628 18.25 11.7508 18.1381 11.7508 18C11.7508 17.8619 11.8628 17.75 12.0008 17.75C12.1389 17.75 12.2508 17.8619 12.2508 18ZM7.75 14C7.75 14.1381 7.63807 14.25 7.5 14.25C7.36193 14.25 7.25 14.1381 7.25 14C7.25 13.8619 7.36193 13.75 7.5 13.75C7.63807 13.75 7.75 13.8619 7.75 14ZM7.75 18C7.75 18.1381 7.63807 18.25 7.5 18.25C7.36193 18.25 7.25 18.1381 7.25 18C7.25 17.8619 7.36193 17.75 7.5 17.75C7.63807 17.75 7.75 17.8619 7.75 18ZM16.75 14C16.75 14.1381 16.6381 14.25 16.5 14.25C16.3619 14.25 16.25 14.1381 16.25 14C16.25 13.8619 16.3619 13.75 16.5 13.75C16.6381 13.75 16.75 13.8619 16.75 14Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3 class="card__title">Join an event</h3>
               <p class="card__text">Come along, bring a friend, meet the neighbours.</p>
@@ -281,10 +273,7 @@
             </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--gold); --accent-bg: rgba(255,255,255,0.15)">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="24" cy="14" r="8"/>
-                  <path d="M10 40v-4c0-6 6-10 14-10s14 4 14 10v4"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M2 14.5V8.5C2 8.03501 2 7.80252 2.05111 7.61177C2.18981 7.09413 2.59413 6.68981 3.11177 6.55111C3.30252 6.5 3.53501 6.5 4 6.5C4.46499 6.5 4.69748 6.5 4.88823 6.55111C5.40587 6.68981 5.81019 7.09413 5.94889 7.61177C6 7.80252 6 8.03501 6 8.5V14.5C6 14.965 6 15.1975 5.94889 15.3882C5.81019 15.9059 5.40587 16.3102 4.88823 16.4489C4.69748 16.5 4.46499 16.5 4 16.5C3.53501 16.5 3.30252 16.5 3.11177 16.4489C2.59413 16.3102 2.18981 15.9059 2.05111 15.3882C2 15.1975 2 14.965 2 14.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M6 7.5H7.76845C8.58101 7.5 9.38511 7.66505 10.132 7.98513L14.8574 10.0103C15.5506 10.3074 16 10.989 16 11.7431C16 12.4373 15.4373 13 14.7431 13H14.0986C13.3729 13 12.6538 12.8615 11.98 12.592L10.5 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14 13H20.5749C21.362 13 22 13.638 22 14.4251C22 15.0613 21.5782 15.6205 20.9664 15.7953L15.7451 17.2871C15.2508 17.4283 14.7392 17.5 14.2251 17.5C13.7437 17.5 13.2645 17.4372 12.7994 17.3132L6 15.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3 class="card__title">Volunteer</h3>
               <p class="card__text">Help run events, mentor, or lend a hand behind the scenes.</p>
@@ -292,11 +281,7 @@
             </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--gold); --accent-bg: rgba(255,255,255,0.15)">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 6a18 18 0 0 0-18 18c0 4 2 8 4 10l-2 6 6-2c3 2 6 2 10 2a18 18 0 0 0 0-34z"/>
-                  <path d="M16 24h16"/>
-                  <path d="M16 18h16"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 16.4998C6.7725 15.4011 6 13.7768 6 11.9998C6 8.68605 8.68629 5.99976 12 5.99976C15.3137 5.99976 18 8.68605 18 11.9998C18 13.7768 17.2275 15.4011 16 16.4998" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M12 11.9998V16.4998" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M9.5 18.9998H14.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M10.5 21.4998H13.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M3.5 11.9998H2.5M5.98438 5.97632L5.23438 5.23022M18.0195 5.97632L18.7695 5.23022M21.5 11.9998H20.5M12 2.49976V3.49976" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3 class="card__title">Share your ideas</h3>
               <p class="card__text">Tell us what's missing. The best ideas come from the people who live here.</p>
@@ -304,9 +289,7 @@
             </div>
             <div class="card card--involvement reveal">
               <div class="card__icon" style="--accent: var(--gold); --accent-bg: rgba(255,255,255,0.15)">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M24 42s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M15.2053 10.7181C13.7947 9.60121 11 7.0478 11 4.74998C11 3.23121 12.0526 2 13.5 2C14.25 2 15 2.2647 16 3.32352C17 2.2647 17.75 2 18.5 2C19.9474 2 21 3.23121 21 4.74998C21 7.0478 18.2053 9.60121 16.7947 10.7181C16.32 11.094 15.68 11.094 15.2053 10.7181Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M2 19V13C2 12.535 2 12.3025 2.05111 12.1118C2.18981 11.5941 2.59413 11.1898 3.11177 11.0511C3.30252 11 3.53501 11 4 11C4.46499 11 4.69748 11 4.88823 11.0511C5.40587 11.1898 5.81019 11.5941 5.94889 12.1118C6 12.3025 6 12.535 6 13V19C6 19.465 6 19.6975 5.94889 19.8882C5.81019 20.4059 5.40587 20.8102 4.88823 20.9489C4.69748 21 4.46499 21 4 21C3.53501 21 3.30252 21 3.11177 20.9489C2.59413 20.8102 2.18981 20.4059 2.05111 19.8882C2 19.6975 2 19.465 2 19Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M6 12H7.76845C8.58101 12 9.38511 12.165 10.132 12.4851L14.8574 14.5103C15.5506 14.8074 16 15.489 16 16.2431C16 16.9373 15.4373 17.5 14.7431 17.5H14.0986C13.3729 17.5 12.6538 17.3615 11.98 17.092L10.5 16.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14 17.5H20.5749C21.362 17.5 22 18.138 22 18.9251C22 19.5613 21.5782 20.1205 20.9664 20.2953L15.7451 21.7871C15.2508 21.9283 14.7392 22 14.2251 22C13.7437 22 13.2645 21.9372 12.7994 21.8132L6 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </div>
               <h3 class="card__title">Support others</h3>
               <p class="card__text">Check in on a neighbour, offer a lift, or share what you have.</p>
@@ -328,7 +311,7 @@
           </div>
           <div class="partner-featured reveal">
             <span class="partner-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" stroke-width="1.5" /><path d="M8 12.5L10.5 15L16 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
             </span>
             <div>
               <span class="partner-featured__label">Confirmed partner</span>
@@ -343,10 +326,7 @@
           <div class="partners-grid">
             <div class="partner-card reveal" style="--accent: var(--sage); --accent-bg: var(--sage-light)">
               <span class="partner-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                  <path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M20 7.5L15.3992 4.24542C13.7542 3.08181 12.9318 2.5 12 2.5C11.0682 2.5 10.2458 3.08181 8.60083 4.24542L4 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18 6.5V21.5H6V6.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M19.7889 12.3944L18 11.5V21.5C19.8856 21.5 20.8284 21.5 21.4142 20.9142C22 20.3284 22 19.3856 22 17.5V15.9721C22 14.7693 22 14.1679 21.7013 13.6846C21.4026 13.2013 20.8647 12.9323 19.7889 12.3944Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M4.21114 12.3944L6 11.5V21.5C4.11438 21.5 3.17157 21.5 2.58579 20.9142C2 20.3284 2 19.3856 2 17.5V15.9721C2 14.7693 2 14.1679 2.2987 13.6846C2.5974 13.2013 3.13531 12.9323 4.21114 12.3944Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M10 21.5V17.5C10 16.3954 10.8954 15.5 12 15.5C13.1046 15.5 14 16.3954 14 17.5V21.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </span>
               <div class="partner-card__body">
                 <span class="partner-card__title">Schools</span>
@@ -355,11 +335,7 @@
             </div>
             <div class="partner-card reveal" style="--accent: var(--green); --accent-bg: var(--green-light)">
               <span class="partner-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="8" r="4"/>
-                  <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
-                  <path d="M8 17h8"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M15.5 15L14 10.5C12.3432 10.4999 12 11.843 12 13.4999V15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M8.5 15L10 10.5C11.6568 10.4999 12 11.843 12 13.4999V15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M21.9779 21.9999C20.8283 21.3294 18.8918 19.8143 16.2887 20.008C15.6292 20.057 15.2991 20.0816 14.9976 20.0584C14.696 20.0352 14.6875 20.0333 14.6706 20.0293C13.139 19.6745 12 18.3357 12 16.7382V3.19665C12 2.53578 12.5357 2.00003 13.1966 2C13.6825 1.99997 14.1202 2.29381 14.3042 2.74356L17.0224 9.38799C18.088 11.993 18.6209 13.2954 19.5497 13.9653C19.6069 14.0065 19.7128 14.0777 19.7726 14.1149C20.7443 14.721 21.1628 14.721 22 14.721" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M2.02208 22C3.17173 21.3295 5.1082 19.8144 7.71127 20.008C8.37081 20.057 8.70094 20.0816 9.00245 20.0584C9.304 20.0353 9.31246 20.0333 9.32938 20.0294C10.861 19.6746 12 18.3357 12 16.7382V3.19664C12 2.53575 11.4642 2 10.8034 2C10.3175 2 9.8798 2.29382 9.69582 2.74355L6.97762 9.38804C5.91195 11.993 5.37912 13.2955 4.45028 13.9654C4.39315 14.0066 4.28717 14.0777 4.22741 14.115C3.25573 14.721 2.83715 14.721 2 14.721" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </span>
               <div class="partner-card__body">
                 <span class="partner-card__title">Faith communities</span>
@@ -368,11 +344,7 @@
             </div>
             <div class="partner-card reveal" style="--accent: var(--teal); --accent-bg: var(--teal-light)">
               <span class="partner-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18"/>
-                  <path d="M5 21V7l7-4 7 4v14"/>
-                  <path d="M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M16 10L18.1494 10.6448C19.5226 11.0568 20.2092 11.2628 20.6046 11.7942C21 12.3256 21 13.0425 21 14.4761V22" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" /><path d="M8 9L11 9M8 13L11 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M12 22V19C12 18.0572 12 17.5858 11.7071 17.2929C11.4142 17 10.9428 17 10 17H9C8.05719 17 7.58579 17 7.29289 17.2929C7 17.5858 7 18.0572 7 19V22" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" /><path d="M2 22L22 22" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" /><path d="M3 22V6.71724C3 4.20649 3 2.95111 3.79118 2.32824C4.58237 1.70537 5.74742 2.04355 8.07752 2.7199L13.0775 4.17122C14.4836 4.57937 15.1867 4.78344 15.5933 5.33965C16 5.89587 16 6.65344 16 8.16857V22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </span>
               <div class="partner-card__body">
                 <span class="partner-card__title">Local organisations</span>
@@ -381,12 +353,7 @@
             </div>
             <div class="partner-card reveal" style="--accent: var(--gold); --accent-bg: var(--gold-light)">
               <span class="partner-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="7" r="4"/>
-                  <circle cx="17" cy="7" r="3"/>
-                  <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/>
-                  <path d="M16 21v-2a4 4 0 0 0-2-3"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18.0003 21C18.0003 19.0567 18.0003 18.085 17.6949 17.3226C17.374 16.5211 16.8218 15.8695 16.1306 15.4764C15.4731 15.1025 14.5003 15 12.92 15.0044L11.0799 15C9.50027 15 8.5465 15.0916 7.89721 15.4525C7.18422 15.8489 6.62044 16.5129 6.29586 17.3386C6.00028 18.0906 6.00028 19.0604 6.00027 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M7.00027 12C5.33783 12.0611 4.50661 12.0916 3.86749 12.4525C3.16567 12.8489 2.61072 13.5129 2.29123 14.3386C2.00028 15.0906 2.00028 16.0604 2.00027 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M17.0003 12C18.6755 12.0655 19.513 12.0982 20.1602 12.4724C20.8404 12.8657 21.3839 13.5179 21.6998 14.3199C22.0003 15.0829 22.0003 16.0553 22.0003 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M15.0003 9C15.0003 10.6569 13.6571 12 12.0003 12C10.3434 12 9.00027 10.6569 9.00027 9C9.00027 7.34315 10.3434 6 12.0003 6C13.6571 6 15.0003 7.34315 15.0003 9Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M10.0003 3.76389C9.46952 3.28885 8.76863 3 8.00027 3C6.34342 3 5.00027 4.34315 5.00027 6C5.00027 7.04349 5.53303 7.96254 6.34138 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M14.002 3.76365C14.5328 3.28861 15.2337 2.99976 16.002 2.99976C17.6589 2.99976 19.002 4.3429 19.002 5.99976C19.002 7.04324 18.4693 7.9623 17.6609 8.49976" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
               </span>
               <div class="partner-card__body">
                 <span class="partner-card__title">Community groups</span>
@@ -455,10 +422,7 @@
     </footer>
 
     <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 19V5" />
-        <path d="m6 11 6-6 6 6" />
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5.5V19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /><path d="M18 11C18 11 13.5811 5.00001 12 5C10.4188 4.99999 6 11 6 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" /></svg>
     </button>
     <script src="./script.js?v=20261011-3"></script>
   </body>
