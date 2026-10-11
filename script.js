@@ -220,7 +220,7 @@
     "creative-arts": "Creative arts, reading, and poetry",
   };
   const topics = {
-    launch: { subject: "launch", message: "I'd like to come to the launch on Thursday 5 November.\n\n" },
+    launch: { subject: "launch", message: "I'd like to come to the launch on Thursday 5th November.\n\n" },
     idea: { subject: "general", message: "I have an idea for an activity: " },
   };
   const params = new URLSearchParams(window.location.search);
