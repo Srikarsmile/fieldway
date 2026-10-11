@@ -54,7 +54,7 @@
   --space-2xl: 3.5rem;
   --space-3xl: 5rem;
 
-  --radius-btn: 10px;
+  --radius-btn: 999px;
   --radius-card: 8px;
   --radius-input: 10px;
   --radius-img: 12px;
@@ -1841,7 +1841,7 @@ p { color: var(--grey); }
   display: block;
   padding: var(--space-md);
   background: var(--sage-light);
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-card);
   text-align: center;
   color: var(--success);
   font-weight: 500;
@@ -2812,7 +2812,7 @@ p { color: var(--grey); }
     font-size: 1.1rem;
   }
 
-  .nav__link--active { border-radius: var(--radius-btn); }
+  .nav__link--active { border-radius: 12px; }
 
   .nav__link--cta {
     display: inline-flex;
